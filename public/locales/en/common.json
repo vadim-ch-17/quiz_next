@@ -11,9 +11,124 @@
         }
     },
     "sections": {
+        "banner": {
+            "title": "Create <span style='color:#C261E8'>your quiz</span> easily",
+            "subTitle": "Codevery Quiz is a plugin that can be downloaded and used on your website for FREE",
+            "image": "/assets/img/banner_en.webp"
+        },
+        "features": {
+            "title": "Features",
+            "subTitle": "Why choose us",
+            "items": [
+                {
+                    "title": "Increase Engagement",
+                    "description": "Customers can earn a coupon with a promo code for a discount in an interactive way after successfully completing the quiz",
+                    "image": "/assets/img/features_1.webp"
+                },
+                {
+                    "title": "Quick and Easy to Create",
+                    "description": "You can create and customize a quiz on a single page and then insert the shortcode into any post or page and you're good to go",
+                    "image": "/assets/img/features_2.webp"
+                },
+                {
+                    "title": "Customizable",
+                    "description": "Questions with text or image answer type, fully customizable coupon and you can add anything you want to the results page (success and failure)",
+                    "image": "/assets/img/features_3.webp"
+                },
+                {
+                    "title": "Capture Emails",
+                    "description": "There is a form to send coupons to customers to collect email addresses, these emails can then be exported to a CSV file.",
+                    "image": "/assets/img/features_4.webp"
+                },
+                {
+                    "title": "Certificate Generation",
+                    "description": "Ability to generate certificates with discounts for customers who successfully complete the quiz",
+                    "image": "/assets/img/features_5.webp"
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Testimonials",
+            "subTitle": "What people say",
+            "reviews": [
+                {
+                    "name": "John Doe",
+                    "user_avatar": "/assets/img/testimonials/user1.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                },
+                {
+                    "name": "Jane Doe",
+                    "user_avatar": "/assets/img/testimonials/user2.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 5
+                },
+                {
+                    "name": "John Doe",
+                    "user_avatar": "/assets/img/testimonials/user3.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                },
+                {
+                    "name": "Jane Doe",
+                    "user_avatar": "/assets/img/testimonials/user4.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 5
+                },
+                {
+                    "name": "John Doe",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                }
+            ]
+        },
         "callToActions": {
             "title": "Easily create a quiz on your website",
             "image": "/assets/img/section_action"
+        },
+        "contacts": {
+            "title": "Contacts",
+            "subTitle": "Have a question? Write to us!",
+            "form": {
+                "inputs": [
+                    {
+                        "tag": "input",
+                        "type": "text",
+                        "name": "user-name",
+                        "label": "Name",
+                        "validation": {
+                            "type": "text",
+                            "require": "Please enter your name",
+                            "min": "Your name must be at least 2 characters long"
+                        }
+                    },
+                    {
+                        "tag": "input",
+                        "type": "email",
+                        "name": "user-email",
+                        "label": "Email",
+                        "validation": {
+                            "type": "email",
+                            "require": "Please enter a valid email address",
+                            "email": "Please enter a valid email address"
+                        }
+                    },
+                    {
+                        "tag": "textarea",
+                        "type": "textarea",
+                        "name": "user-message",
+                        "label": "Message",
+                        "attrs": {
+                            "rows": "4"
+                        }
+                    },
+                    {
+                        "tag": "input",
+                        "type": "submit",
+                        "value": "Send"
+                    }
+                ]
+            }
         }
     },
     "footer": {

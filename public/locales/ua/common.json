@@ -11,9 +11,124 @@
         }
     },
     "sections": {
+        "banner": {
+            "title": "створюйте <span style='color:#C261E8'>вікторину</span> легко",
+            "subTitle": "Codevery Quiz - це плагін, який можна БЕЗКОШТОВНО завантажити та використовувати на вашому сайті",
+            "image": "/assets/img/banner_ua.webp"
+        },
+        "features": {
+            "title": "Переваги",
+            "subTitle": "Чому обирають нас",
+            "items": [
+                {
+                    "title": "Підвищення залученості",
+                    "description": "Клієнти можуть заробити купон з промокодом на знижку в інтерактивному режимі після успішного проходження вікторини",
+                    "image": "/assets/img/features_1.webp"
+                },
+                {
+                    "title": "Швидке та легке створення",
+                    "description": "Ви можете створити та налаштувати вікторину на одній сторінці, а потім вставити шорткод у будь-яку публікацію або сторінку, і все готово",
+                    "image": "/assets/img/features_2.webp"
+                },
+                {
+                    "title": "Налаштування",
+                    "description": "Питання з текстовим або графічним типом відповіді, повністю настроюваний купон, і ви можете додати все, що завгодно, на сторінку результатів (успіх і невдача)",
+                    "image": "/assets/img/features_3.webp"
+                },
+                {
+                    "title": "Збір електронних листів",
+                    "description": "Існує форма для надсилання купонів клієнтам для збору адрес електронної пошти, які потім можна експортувати у файл CSV.",
+                    "image": "/assets/img/features_4.webp"
+                },
+                {
+                    "title": "Генерація сертифікатів",
+                    "description": "Можливість генерувати сертифікати зі знижками для клієнтів, які успішно пройшли тест",
+                    "image": "/assets/img/features_5.webp"
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Відгуки",
+            "subTitle": "Що кажуть люди",
+            "reviews": [
+                {
+                    "name": "John Doe",
+                    "user_avatar": "/assets/img/testimonials/user1.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                },
+                {
+                    "name": "Jane Doe",
+                    "user_avatar": "/assets/img/testimonials/user2.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 5
+                },
+                {
+                    "name": "John Doe",
+                    "user_avatar": "/assets/img/testimonials/user3.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                },
+                {
+                    "name": "Jane Doe",
+                    "user_avatar": "/assets/img/testimonials/user4.webp",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 5
+                },
+                {
+                    "name": "John Doe",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "rating": 4
+                }
+            ]
+        },
         "callToActions": {
             "title": "Легко створюйте вікторину на своєму веб-сайті",
             "image": "/assets/img/section_action"
+        },
+        "contacts": {
+            "title": "Контакти",
+            "subTitle": "Є питання? Напишіть нам!",
+            "form": {
+                "inputs": [
+                    {
+                        "tag": "input",
+                        "type": "text",
+                        "name": "user-name",
+                        "label": "Ім'я",
+                        "validation": {
+                            "type": "text",
+                            "require": "Введіть ім'я",
+                            "min": "Ім'я повинно містити не менше 2 символів"
+                        }
+                    },
+                    {
+                        "tag": "input",
+                        "type": "email",
+                        "name": "user-email",
+                        "label": "Електронна пошта",
+                        "validation": {
+                            "type": "email",
+                            "require": "Введіть електронну пошту",
+                            "email": "Введіть коректну електронну пошту"
+                        }
+                    },
+                    {
+                        "tag": "textarea",
+                        "type": "textarea",
+                        "name": "user-message",
+                        "label": "Ваше повідомлення",
+                        "attrs": {
+                            "rows": "4"
+                        }
+                    },
+                    {
+                        "tag": "input",
+                        "type": "submit",
+                        "value": "Відправити"
+                    }
+                ]
+            }
         }
     },
     "footer": {

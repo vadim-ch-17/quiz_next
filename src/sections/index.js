@@ -1,13 +1,18 @@
-import Title from "@/components/Title";
 import CallToActions from "./CallToActions";
-
+import Features from "./Features";
+import Contacts from "./Contacts";
+import Banner from "./Banner";
+import Testimonials from "./Testimonials";
 const Sections = ({ sections, font }) => {
+
     return (
         <>
-            <Title content={{ title: 'ewgewghewh' }} tag="h1" />
+            <Banner content={sections.banner} fonts={font} />
+            <Features content={sections.features} font={font} />
             <CallToActions content={sections.callToActions} img={"top"} font={font.daysOne} />
-            <h1>test</h1>
+            <Testimonials content={sections.testimonials} font={font.mulish} />
             <CallToActions content={sections.callToActions} img={"bottom"} font={font.daysOne} />
+            <Contacts content={sections.contacts} font={font.mulish} />
         </>
     );
 }
