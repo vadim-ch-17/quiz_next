@@ -1,0 +1,23 @@
+{
+    "title": "Українська",
+    "buttons": {
+        "download": {
+            "title": "Завантажити безкоштовно",
+            "url": "#"
+        },
+        "demo": {
+            "title": "Демо",
+            "url": "#"
+        }
+    },
+    "sections": {
+        "callToActions": {
+            "title": "Легко створюйте вікторину на своєму веб-сайті",
+            "image": "/assets/img/section_action"
+        }
+    },
+    "footer": {
+        "title": "Почніть створювати вікторину вже зараз!",
+        "logo": "/assets/img/hands.webp"
+    }
+}

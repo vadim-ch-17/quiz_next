@@ -8,7 +8,7 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   compiler: {
-    ctyledComponents: true
+    styledComponents: true
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

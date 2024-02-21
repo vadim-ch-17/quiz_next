@@ -1,25 +1,21 @@
-import { createElement } from 'react';
+import { createElement, useEffect, useState } from 'react';
 import StyledButton from './styles';
-const Button = ({ children, href, classes, label, onClick }) => {
-    const typeBtn = href ? 'a' : 'button';
+const Button = ({ children, href, as, type, classes, label, onClick }) => {
 
     return (
         <StyledButton
-            as={typeBtn}
+            as={as}
             className={classes}
             href={href}
+            type={type}
             aria-label={label}
             onClick={onClick}
         >
-            {children}
+            <span className='relative z-10 font-mulish font-extrabold text-lg tracking-normal'>
+                {children}
+            </span>
         </StyledButton>
     );
-    // return createElement(typeBtn, {
-    //     className: classes,
-    //     ...(href ? { href } : {}),
-    //     ...(label ? { 'aria-label': label } : {}),
-    //     onClick,
-    // }, children);
 }
 
 export default Button;

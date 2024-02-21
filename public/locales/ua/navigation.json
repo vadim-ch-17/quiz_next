@@ -2,25 +2,25 @@
     "items": [
         {
             "id": 1,
-            "name": "Features",
+            "name": "Переваги",
             "url": "features",
             "active": true
         },
         {
             "id": 2,
-            "name": "How it works",
+            "name": "Як це працює",
             "url": "how_it_works",
             "active": true
         },
         {
             "id": 3,
-            "name": "Testimonials",
+            "name": "Відгуки",
             "url": "testimonials",
             "active": true
         },
         {
             "id": 4,
-            "name": "Contacts",
+            "name": "Контакти",
             "url": "contacts",
             "active": true
         }

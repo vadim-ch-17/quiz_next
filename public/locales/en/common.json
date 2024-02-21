@@ -1,3 +1,23 @@
 {
-    "title": "English"
+    "title": "English",
+    "buttons": {
+        "download": {
+            "title": "Free Download",
+            "url": "#"
+        },
+        "demo": {
+            "title": "Demo",
+            "url": "#"
+        }
+    },
+    "sections": {
+        "callToActions": {
+            "title": "Easily create a quiz on your website",
+            "image": "/assets/img/section_action"
+        }
+    },
+    "footer": {
+        "title": "Start creating your quiz right now!",
+        "logo": "/assets/img/hands.webp"
+    }
 }
