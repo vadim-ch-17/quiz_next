@@ -6,17 +6,23 @@ const defaultContext = {}
 const Context = createContext(defaultContext);
 
 export const LandingProvider = ({ children }) => {
-    const [state, setState] = useState(defaultContext);
-    const [cookies, setCookies] = useState(!!Cookies.get('privacy') || false);
     const [loader, setLoader] = useState(false);
+    const [isOpenModal, setIsOpenModal] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+    const [acceptCookies, setAcceptCookies] = useState(Cookies.get('privacy') === 'accepted' || false);
+    const [rejectCookies, setRejectCookies] = useState(false);
 
     const value = {
-        state,
-        cookies,
+        acceptCookies,
         loader,
-        setState,
-        setCookies,
+        isOpenModal,
+        modalContent,
+        rejectCookies,
+        setAcceptCookies,
         setLoader,
+        setIsOpenModal,
+        setModalContent,
+        setRejectCookies,
     };
     return (
         <Context.Provider value={value}>

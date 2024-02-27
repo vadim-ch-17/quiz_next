@@ -1,11 +1,11 @@
 import ResponsiveImage from "../ResponsiveImage";
 
-const Card = ({ card, font }) => {
+const Card = ({ card, font, idx }) => {
     const { title, description, image } = card;
     const { daysOne, mulish } = font;
 
     return (
-        <div className="w-[368px] min-h-[340px] text-mediumPrimary bg-white rounded-[40px] shadow-card pt-[20px] pl-[36px] pr-[33px] pb-[68px]">
+        <div data-wow-delay={`0.${2 + idx}s`} className={`wow fadeIn w-[368px] min-h-[340px] text-mediumPrimary bg-white rounded-[40px] shadow-card pt-[20px] pl-[36px] pr-[33px] pb-[68px]`}>
             <ResponsiveImage
                 src={image}
                 alt={"Card"}

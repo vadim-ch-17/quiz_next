@@ -8,7 +8,7 @@ const Features = ({ content, font }) => {
             <div className="container">
                 <Title content={{ title: content.title, subTitle: content.subTitle }} tag="h2" classContainer="mb-[36px] md:mb-[64px]" />
                 <div className="flex flex-wrap justify-center gap-x-[30px] gap-y-[25px] md:gap-y-[39px]">
-                    {content.items && content.items.map((card, index) => <Card key={index} card={card} font={font} />)}
+                    {content.items && content.items.map((card, index) => <Card key={index} card={card} font={font} idx={index} />)}
                 </div>
             </div>
         </div>

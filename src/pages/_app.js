@@ -1,3 +1,4 @@
+import "@/styles/inc/animate.css";
 import "@/styles/globals.css";
 import { LandingProvider } from "@/utils/landing-context";
 import { appWithTranslation } from "next-i18next";

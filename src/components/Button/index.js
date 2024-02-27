@@ -1,4 +1,3 @@
-import { createElement, useEffect, useState } from 'react';
 import StyledButton from './styles';
 const Button = ({ children, href, as, type, classes, label, onClick }) => {
 
@@ -11,7 +10,7 @@ const Button = ({ children, href, as, type, classes, label, onClick }) => {
             aria-label={label}
             onClick={onClick}
         >
-            <span className='relative z-10 font-mulish font-extrabold text-lg tracking-normal'>
+            <span className='relative z-10 font-extrabold text-lg tracking-normal'>
                 {children}
             </span>
         </StyledButton>

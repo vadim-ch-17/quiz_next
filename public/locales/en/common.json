@@ -3,18 +3,18 @@
     "buttons": {
         "download": {
             "title": "Free Download",
-            "url": "#"
+            "url": "https://wordpress.org/plugins/codevery-quiz/"
         },
         "demo": {
             "title": "Demo",
-            "url": "#"
+            "url": "https://wordpress.org/plugins/codevery-quiz/"
         }
     },
     "sections": {
         "banner": {
             "title": "Create <span style='color:#C261E8'>your quiz</span> easily",
             "subTitle": "Codevery Quiz is a plugin that can be downloaded and used on your website for FREE",
-            "image": "/assets/img/banner_en.webp"
+            "image": "/assets/img/banner_en_"
         },
         "features": {
             "title": "Features",
@@ -47,6 +47,37 @@
                 }
             ]
         },
+        "howItWorks": {
+            "title": "How it works",
+            "subTitle": "Easy steps",
+            "items": [
+                {
+                    "title": "Configuration",
+                    "description": "After activating the plugin, you can configure some basic settings, such as the number of questions in the quiz, scoring methods, and color settings to match your website design",
+                    "image": "/assets/img/how_it_works_1.webp"
+                },
+                {
+                    "title": "Creating a Quiz",
+                    "description": "You can add questions and arrange them in a specific order, set answer options, indicate correct answers, assign scoring values, and add images",
+                    "image": "/assets/img/how_it_works_2.webp"
+                },
+                {
+                    "title": "Quiz Display",
+                    "description": "Once you have created a quiz, the plugin will provide a shortcode that can be inserted into any post or page. This shortcode will create a quiz interface on the front end of your website",
+                    "image": "/assets/img/how_it_works_3.webp"
+                },
+                {
+                    "title": "User Interaction",
+                    "description": "Visitors to your site will be able to take the quiz by selecting the answers to the questions presented. The plugin displays correct and incorrect answers and provides explanations for the correct answers",
+                    "image": "/assets/img/how_it_works_4.webp"
+                },
+                {
+                    "title": "Certificate generation",
+                    "description": "After successful completion of the test, a certificate with discounts for customers is generated. In the certificate template, you can customize colors and data",
+                    "image": "/assets/img/how_it_works_5.webp"
+                }
+            ]
+        },
         "testimonials": {
             "title": "Testimonials",
             "subTitle": "What people say",
@@ -54,30 +85,30 @@
                 {
                     "name": "John Doe",
                     "user_avatar": "/assets/img/testimonials/user1.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
                     "rating": 4
                 },
                 {
                     "name": "Jane Doe",
                     "user_avatar": "/assets/img/testimonials/user2.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. .",
                     "rating": 5
                 },
                 {
                     "name": "John Doe",
                     "user_avatar": "/assets/img/testimonials/user3.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
                     "rating": 4
                 },
                 {
                     "name": "Jane Doe",
                     "user_avatar": "/assets/img/testimonials/user4.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
                     "rating": 5
                 },
                 {
                     "name": "John Doe",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
                     "rating": 4
                 }
             ]
@@ -119,7 +150,7 @@
                         "name": "user-message",
                         "label": "Message",
                         "attrs": {
-                            "rows": "4"
+                            "rows": "6"
                         }
                     },
                     {
@@ -129,6 +160,31 @@
                     }
                 ]
             }
+        }
+    },
+    "messages": {
+        "success": {
+            "title": "Thank you!",
+            "message": "Your message has been sent successfully",
+            "button": "Ok",
+            "image": "/assets/img/thank_you.webp"
+        },
+        "error": "An error occurred while sending the message",
+        "cookies": {
+            "title": "We value your privacy",
+            "message": "We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking 'Accept', you consent to our use of cookies.",
+            "buttons": [
+                {
+                    "title": "Accept",
+                    "type": "blue",
+                    "action": "accept"
+                },
+                {
+                    "title": "Deny",
+                    "type": "gray",
+                    "action": "reject"
+                }
+            ]
         }
     },
     "footer": {

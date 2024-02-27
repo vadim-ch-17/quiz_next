@@ -12,13 +12,13 @@ const Footer = () => {
                     <ResponsiveImage
                         src={t('footer.logo')}
                         alt={"Codevery Quiz"}
-                        classes={" max-h-[61px] max-w-[147px] lg:max-h-[61px] lg:max-w-[147px] "}
+                        classes={"wow fadeIn max-h-[61px] max-w-[147px] lg:max-h-[61px] lg:max-w-[147px] "}
                     />
                 </div>
-                <p className="text-center text-white font-dayOne mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full ">{t('footer.title')}</p>
-                <ButtonsContainer classContainer="justify-center " btnDownload="pink" btnDemo="blue" />
+                <p ata-wow-duration="0.5s" className="wow fadeIn text-center text-white font-dayOne mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full ">{t('footer.title')}</p>
+                <ButtonsContainer ata-wow-duration="0.5s" classContainer="wow fadeIn justify-center " btnDownload="pink" btnDemo="blue" />
             </div>
-            <Navigation typeLinks={"default"} classContainer={"flex flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[53px] mb-[38px] sm:mb-[48px] justify-center text-white"} />
+            <Navigation ata-wow-duration="1s" typeLinks={"default"} classContainer={"wow fadeIn flex flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[53px] mb-[38px] sm:mb-[48px] justify-center text-white"} />
             <p className="text-center text-[#AEB5C6] font-mulish font-bold text-xs">&copy; {currentYear} Codevery</p>
         </footer>
     );

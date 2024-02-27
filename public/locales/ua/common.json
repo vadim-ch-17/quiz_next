@@ -3,18 +3,18 @@
     "buttons": {
         "download": {
             "title": "Завантажити безкоштовно",
-            "url": "#"
+            "url": "https://wordpress.org/plugins/codevery-quiz/"
         },
         "demo": {
             "title": "Демо",
-            "url": "#"
+            "url": "https://wordpress.org/plugins/codevery-quiz/"
         }
     },
     "sections": {
         "banner": {
             "title": "створюйте <span style='color:#C261E8'>вікторину</span> легко",
             "subTitle": "Codevery Quiz - це плагін, який можна БЕЗКОШТОВНО завантажити та використовувати на вашому сайті",
-            "image": "/assets/img/banner_ua.webp"
+            "image": "/assets/img/banner_ua_"
         },
         "features": {
             "title": "Переваги",
@@ -47,6 +47,37 @@
                 }
             ]
         },
+        "howItWorks": {
+            "title": "Як це працює",
+            "subTitle": "Прості кроки",
+            "items": [
+                {
+                    "title": "Налаштування",
+                    "description": "Після активації плагіна ви можете налаштувати деякі основні параметри, такі як кількість запитань у тесті, методи підрахунку балів та налаштування кольорів відповідно до дизайну вашого веб-сайту",
+                    "image": "/assets/img/how_it_works_1.webp"
+                },
+                {
+                    "title": "Створення вікторини",
+                    "description": "Ви можете додавати запитання та розташувати їх в певному порядку, встановлювати варіанти відповідей, вказувати правильні відповіді, призначати значення балів і додавати зображення.",
+                    "image": "/assets/img/how_it_works_2.webp"
+                },
+                {
+                    "title": "Відображення",
+                    "description": "Після того, як ви створили вікторину, плагін надасть шорткод, який можна вставити в будь-який допис або сторінку. Цей шорткод створить інтерфейс вікторини на інтерфейсі вашого веб-сайту.",
+                    "image": "/assets/img/how_it_works_3.webp"
+                },
+                {
+                    "title": "Взаємодія з користувачами",
+                    "description": "Відвідувачі вашого сайту зможуть взяти участь у вікторині, вибравши відповіді на представлені запитання. Плагін відображає правильні і неправильні відповіді та надає пояснення для правильних відповідей",
+                    "image": "/assets/img/how_it_works_4.webp"
+                },
+                {
+                    "title": "Генерація сертифікату",
+                    "description": "Після успішного проходження тесту, генерується сертифікат зі знижками для клієнтів. В шаблоні сертифіката ви можете налаштувати кольори та дані",
+                    "image": "/assets/img/how_it_works_5.webp"
+                }
+            ]
+        },
         "testimonials": {
             "title": "Відгуки",
             "subTitle": "Що кажуть люди",
@@ -54,19 +85,19 @@
                 {
                     "name": "John Doe",
                     "user_avatar": "/assets/img/testimonials/user1.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
                     "rating": 4
                 },
                 {
                     "name": "Jane Doe",
                     "user_avatar": "/assets/img/testimonials/user2.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. .",
                     "rating": 5
                 },
                 {
                     "name": "John Doe",
                     "user_avatar": "/assets/img/testimonials/user3.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
                     "rating": 4
                 },
                 {
@@ -77,7 +108,7 @@
                 },
                 {
                     "name": "John Doe",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
                     "rating": 4
                 }
             ]
@@ -119,7 +150,7 @@
                         "name": "user-message",
                         "label": "Ваше повідомлення",
                         "attrs": {
-                            "rows": "4"
+                            "rows": "6"
                         }
                     },
                     {
@@ -129,6 +160,31 @@
                     }
                 ]
             }
+        }
+    },
+    "messages": {
+        "success": {
+            "title": "Дякуємо!",
+            "message": "Ваше повідомлення успішно відправлене ",
+            "button": "Oк",
+            "image": "/assets/img/thank_you.webp"
+        },
+        "error": "An error occurred while sending the message",
+        "cookies": {
+            "title": "Ми цінуємо вашу конфіденційність",
+            "message": "Ми використовуємо файли cookie, щоб покращити роботу веб-переглядача, показувати персоналізовану рекламу чи вміст і аналізувати наш трафік. Натиснувши «Прийняти», ви погоджуєтесь на використання файлів cookie.",
+            "buttons": [
+                {
+                    "title": "Прийняти",
+                    "type": "blue",
+                    "action": "accept"
+                },
+                {
+                    "title": "Відхилити",
+                    "type": "gray",
+                    "action": "reject"
+                }
+            ]
         }
     },
     "footer": {

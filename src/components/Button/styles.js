@@ -49,12 +49,13 @@ const buttonTypeColors = (type) => {
         bgHoverColor: theme.colors.hoverPink,
         hoverColor: theme.colors.hoverWhite,
       };
-    case 'white':
+
+    case 'gray':
       return {
-        color: theme.colors.blue,
-        bgColor: theme.colors.white,
-        bgHoverColor: theme.colors.blue,
-        hoverColor: theme.colors.white,
+        color: theme.colors.darkPrimary,
+        bgColor: theme.colors.gray2Xl,
+        bgHoverColor: theme.colors.darkPrimary,
+        hoverColor: theme.colors.gray2Xl,
       };
     default:
       return {
