@@ -1,5 +1,9 @@
 {
-    "title": "English",
+    "seo": {
+        "title": "Quiz Plugin",
+        "description": "Create engaging quizzes on your WordPress site and reward users with discount coupons based on their performance. The Codevery Quiz plugin offers customizable quizzes with unlimited questions and easy integration into any post or page. Capture emails for coupon distribution and generate certificates for successful quiz completions.",
+        "keywords": "WordPress quiz plugin, customizable quizzes, discount coupons, engagement, email capture, certificate generation, interactive quizzes, coupon rewards, user engagement, website customization, sales boost, reward system, point threshold, CSV export, promotional codes."
+    },
     "buttons": {
         "download": {
             "title": "Free Download",
@@ -54,27 +58,27 @@
                 {
                     "title": "Configuration",
                     "description": "After activating the plugin, you can configure some basic settings, such as the number of questions in the quiz, scoring methods, and color settings to match your website design",
-                    "image": "/assets/img/how_it_works_1.webp"
+                    "image": "/assets/img/how_it_works_1_"
                 },
                 {
                     "title": "Creating a Quiz",
                     "description": "You can add questions and arrange them in a specific order, set answer options, indicate correct answers, assign scoring values, and add images",
-                    "image": "/assets/img/how_it_works_2.webp"
+                    "image": "/assets/img/how_it_works_2_"
                 },
                 {
                     "title": "Quiz Display",
                     "description": "Once you have created a quiz, the plugin will provide a shortcode that can be inserted into any post or page. This shortcode will create a quiz interface on the front end of your website",
-                    "image": "/assets/img/how_it_works_3.webp"
+                    "image": "/assets/img/how_it_works_3_"
                 },
                 {
                     "title": "User Interaction",
                     "description": "Visitors to your site will be able to take the quiz by selecting the answers to the questions presented. The plugin displays correct and incorrect answers and provides explanations for the correct answers",
-                    "image": "/assets/img/how_it_works_4.webp"
+                    "image": "/assets/img/how_it_works_4_"
                 },
                 {
                     "title": "Certificate generation",
                     "description": "After successful completion of the test, a certificate with discounts for customers is generated. In the certificate template, you can customize colors and data",
-                    "image": "/assets/img/how_it_works_5.webp"
+                    "image": "/assets/img/how_it_works_5_"
                 }
             ]
         },
@@ -175,14 +179,14 @@
             "message": "We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking 'Accept', you consent to our use of cookies.",
             "buttons": [
                 {
-                    "title": "Accept",
-                    "type": "blue",
-                    "action": "accept"
-                },
-                {
                     "title": "Deny",
                     "type": "gray",
                     "action": "reject"
+                },
+                {
+                    "title": "Accept",
+                    "type": "blue",
+                    "action": "accept"
                 }
             ]
         }

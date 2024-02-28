@@ -14,6 +14,8 @@ const colors = {
     grayLg: '#DCDBDB',
     grayXl: '#C2CEE4',
     gray2Xl: '#E9EAED',
+    gray3Xl: '#adb5cd',
+    metal: '#949cb6',
     error: '#FF0000',
     success: '#008000',
     gold: '#FEC34B'

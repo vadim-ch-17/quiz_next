@@ -37,6 +37,7 @@ const Banner = ({ content, fonts }) => {
                             data-rellax-min="5"
                             src={`${image}900.webp`}
                             alt={'Quiz plugin for WordPress'}
+                            loading="lazy"
                         />
                     </picture>
                 </div>

@@ -34,7 +34,7 @@ const Testimonials = ({ content, font }) => {
     // }, []);
 
     return (
-        <div id="testimonials" className="bg-lightGrey pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
+        <div id="testimonials" className="bg-gray4Xl pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
             <Title content={{ title: content.title, subTitle: content.subTitle }} tag="h2" classContainer="mb-0 md:mb-[64px]" />
             <TestimonialsContainer>
                 <Swiper
@@ -59,7 +59,7 @@ const Testimonials = ({ content, font }) => {
                         },
                     }}
                     loop={false}
-                    pagination={{ el: '.dots', clickable: true, dynamicMainBullets: 1, type: 'bullets' }}
+                    pagination={{ el: '.dots', clickable: true, dynamicBullets: true, dynamicMainBullets: 2, type: 'bullets' }}
                     speed={500}
 
                 >
@@ -72,7 +72,7 @@ const Testimonials = ({ content, font }) => {
 
                     <div className="slider-navigation hidden md:flex justify-center mt-5">
                         <div className="button-prev rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowLeft className=' text-[28px]' /></div>
-                        <div className="dots flex items-center justify-center !w-auto mx-28"></div>
+                        <div className="dots flex items-center justify-center !w-auto mx-28 !translate-x-0"></div>
                         <div className="button-next rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowRight className=' text-[28px]' /></div>
                     </div>
                 </Swiper>

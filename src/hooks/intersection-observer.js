@@ -4,6 +4,7 @@ const useIntersectionObserver = (options) => {
     const ref = useRef(null);
     const [isIntersecting, setIntersecting] = useState(false);
     const [root, setRoot] = useState(null);
+    const [current, setCurrent] = useState(null);
 
     useEffect(() => {
         if (!ref.current || !root) {
@@ -12,6 +13,7 @@ const useIntersectionObserver = (options) => {
 
         const observer = new IntersectionObserver(([entry]) => {
             setIntersecting(entry.isIntersecting);
+            setCurrent(entry.target.dataset.active);
         }, { ...options, root });
 
         observer.observe(ref.current);
@@ -23,7 +25,7 @@ const useIntersectionObserver = (options) => {
         };
     }, [ref, root, options]);
 
-    return [ref, isIntersecting, setRoot];
+    return [ref, isIntersecting, setRoot, current];
 };
 
 export default useIntersectionObserver;

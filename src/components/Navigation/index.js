@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-// import { useAppContext } from "@/utils/context";
 import { toAnchor } from "./componentUtils";
 
 const Navigation = ({
@@ -33,7 +32,7 @@ const Navigation = ({
                         >
                             <Link
                                 href={item.url}
-                                onClick={item?.modal ? openModal : (e) => toAnchor(e)}
+                                onClick={item?.modal ? openModal : (e) => toAnchor(e, setIsOpenNav, isOpenNav)}
                                 data-anchor={item?.url}
                                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
                                 aria-label={t(item.name)}

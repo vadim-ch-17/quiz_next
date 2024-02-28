@@ -57,7 +57,7 @@ const Slide = ({ slide, font }) => {
                     <p className={`review ${openRewiew ? '' : 'typography'} min-h-[70px] overflow-hidden text-mediumPrimary text-[14px] tracking-[0.3px] leading-6`}>
                         {review}
                     </p>
-                    <a className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6" onClick={readMoreHundler}>{readMore ? 'Less' : 'More'}</a>
+                    <a className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase" onClick={readMoreHundler}>{readMore ? 'Less' : 'More'}</a>
                 </div>
             </div>
         </div>

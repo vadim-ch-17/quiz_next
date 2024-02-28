@@ -37,6 +37,9 @@ module.exports = {
         grayXl: '#D9D9D9',
         gray2Xl: '#E9EAED',
         gray3Xl: '#E3E8F1',
+        gray4Xl: '#F0F3F8',
+        gray5Xl: '#949CB6',
+        gray6Xl: '#B8BECA',
         error: '#FF0000',
         success: '#008000',
         gold: '#FEC34B'

@@ -2,6 +2,17 @@ import ButtonsContainer from "../ButtonsContainer";
 import Navigation from "../Navigation";
 import ResponsiveImage from "../ResponsiveImage";
 import { useTranslation } from "next-i18next";
+import { Mulish, Days_One } from "next/font/google";
+
+const mulish = Mulish({
+    weight: ["400", "600", "700", "800", "900"],
+    subsets: ["latin"]
+});
+const daysOne = Days_One({
+    weight: ["400"],
+    subsets: ["latin"]
+});
+
 const Footer = () => {
     const { t } = useTranslation("common");
     const currentYear = new Date().getFullYear();
@@ -15,11 +26,11 @@ const Footer = () => {
                         classes={"wow fadeIn max-h-[61px] max-w-[147px] lg:max-h-[61px] lg:max-w-[147px] "}
                     />
                 </div>
-                <p ata-wow-duration="0.5s" className="wow fadeIn text-center text-white font-dayOne mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full ">{t('footer.title')}</p>
+                <p ata-wow-duration="0.5s" className={`${daysOne.className} wow fadeIn text-center text-white font-dayOne mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full `}>{t('footer.title')}</p>
                 <ButtonsContainer ata-wow-duration="0.5s" classContainer="wow fadeIn justify-center " btnDownload="pink" btnDemo="blue" />
             </div>
-            <Navigation ata-wow-duration="1s" typeLinks={"default"} classContainer={"wow fadeIn flex flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[53px] mb-[38px] sm:mb-[48px] justify-center text-white"} />
-            <p className="text-center text-[#AEB5C6] font-mulish font-bold text-xs">&copy; {currentYear} Codevery</p>
+            <Navigation ata-wow-duration="1s" typeLinks={"default"} classContainer={`${mulish.className} wow fadeIn flex flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[53px] mb-[38px] sm:mb-[48px] justify-center text-white`} />
+            <p className={` ${mulish.className} text-center text-[#AEB5C6] font-mulish font-bold text-xs`}>&copy; {currentYear} Codevery</p>
         </footer>
     );
 }

@@ -48,6 +48,7 @@ export const TestimonialsContainer = styled.div`
     .swiper-pagination-bullet {
         height: 16px;
         width: 16px;
+        margin: 0 15px!important;
         background-color: ${theme.colors.grayXl};
         opacity: 1!important;
     }

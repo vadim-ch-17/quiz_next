@@ -1,4 +1,4 @@
-
+import Head from "next/head";
 import { Mulish, Days_One } from "next/font/google";
 import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -39,6 +39,11 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>{t('seo.title')}</title>
+        <meta name="description" content={t('seo.description')} />
+        <meta name="keywords" content={t('seo.keywords')} />
+      </Head>
       <Sections sections={sections} font={{ mulish, daysOne }} />
       <UpButton />
       {ModalContent && <Modal>
@@ -54,5 +59,6 @@ export const getStaticProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale, ['common', 'navigation'])),
     },
+    revalidate: 3600,
   };
 };

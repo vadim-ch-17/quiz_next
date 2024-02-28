@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nextquiz:
+    container_name: chvs_quiz
+    build:
+      context: /home/chvs/quiz/public_html
+      dockerfile: Dockerfile
+    ports:
+      - "5001:3000"
+    environment:
+      FLASK_ENV: development
