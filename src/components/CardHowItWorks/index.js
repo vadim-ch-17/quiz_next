@@ -43,6 +43,7 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer }) => {
                         className="max-h-[295px] "
                         src={`${image}full.webp`}
                         alt={title}
+                        loading="lazy"
                     />
                 </picture>
             </div>

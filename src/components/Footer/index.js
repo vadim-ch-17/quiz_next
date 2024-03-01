@@ -2,14 +2,14 @@ import ButtonsContainer from "../ButtonsContainer";
 import Navigation from "../Navigation";
 import ResponsiveImage from "../ResponsiveImage";
 import { useTranslation } from "next-i18next";
-import { Mulish, Days_One } from "next/font/google";
+import { Mulish, Exo_2 } from "next/font/google";
 
 const mulish = Mulish({
     weight: ["400", "600", "700", "800", "900"],
     subsets: ["latin"]
 });
-const daysOne = Days_One({
-    weight: ["400"],
+const exo2 = Exo_2({
+    weight: ["400", "500", "600", "700", "800", "900"],
     subsets: ["latin"]
 });
 
@@ -26,7 +26,7 @@ const Footer = () => {
                         classes={"wow fadeIn max-h-[61px] max-w-[147px] lg:max-h-[61px] lg:max-w-[147px] "}
                     />
                 </div>
-                <p ata-wow-duration="0.5s" className={`${daysOne.className} wow fadeIn text-center text-white font-dayOne mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full `}>{t('footer.title')}</p>
+                <p ata-wow-duration="0.5s" className={`${exo2.className} wow fadeIn text-center text-white font-bold mb-[35px] sm:mb-[60px] max-w-[227px] mx-auto sm:max-w-full `}>{t('footer.title')}</p>
                 <ButtonsContainer ata-wow-duration="0.5s" classContainer="wow fadeIn justify-center " btnDownload="pink" btnDemo="blue" />
             </div>
             <Navigation ata-wow-duration="1s" typeLinks={"default"} classContainer={`${mulish.className} wow fadeIn flex flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[53px] mb-[38px] sm:mb-[48px] justify-center text-white`} />

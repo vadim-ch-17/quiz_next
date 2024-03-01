@@ -1,5 +1,6 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useLandingContext } from "@/utils/landing-context";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import "swiper/swiper-bundle.css";
@@ -8,32 +9,23 @@ import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Title from "@/components/Title";
 import Slide from "@/components/Slide";
 import { TestimonialsContainer } from "./style";
+import { getDataReviews } from "./componentUtils";
+
 const Testimonials = ({ content, font }) => {
     const swiperRef = useRef(null);
+    const [reviewsData, setReviewsData] = useState([]);
+    const { reviews } = useLandingContext();
 
-    // useEffect(() => {
-    //     if (swiperRef.current) {
-    //         const swiper = swiperRef.current.swiper;
+    useEffect(() => {
+        if (!reviews) return;
+        setReviewsData(getDataReviews(reviews));
 
-    //         const toggleButtonPrev = () => {
-    //             const action = swiper.activeIndex === 1 ? 'add' : 'remove';
-    //             document.querySelector('.button-prev').classList[action]('swiper-button-disabled');
-    //         };
+        return () => {
+            setReviewsData([]);
+        }
+    }, [reviews])
 
-    //         const toggleButtonNext = () => {
-    //             const action = swiper.activeIndex === swiper.slides.length - 2 ? 'add' : 'remove';
-    //             document.querySelector('.button-next').classList[action]('swiper-button-disabled');
-    //         };
-
-    //         toggleButtonPrev();
-    //         swiper.on('slideChange', () => {
-    //             toggleButtonNext();
-    //             toggleButtonPrev();
-    //         });
-    //     }
-    // }, []);
-
-    return (
+    return reviewsData.length && (
         <div id="testimonials" className="bg-gray4Xl pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
             <Title content={{ title: content.title, subTitle: content.subTitle }} tag="h2" classContainer="mb-0 md:mb-[64px]" />
             <TestimonialsContainer>
@@ -42,18 +34,19 @@ const Testimonials = ({ content, font }) => {
                     modules={[Navigation, Pagination]}
                     spaceBetween={0}
                     slidesPerView={3}
-                    initialSlide={1}
                     navigation={{
                         nextEl: '.button-next',
                         prevEl: '.button-prev',
                     }}
                     breakpoints={{
                         320: {
+                            initialSlide: 0,
                             slidesPerView: 1.2,
                             spaceBetween: '20px',
                             centeredSlides: false,
                         },
                         768: {
+                            initialSlide: 1,
                             slidesPerView: 3,
                             centeredSlides: true,
                         },
@@ -63,9 +56,9 @@ const Testimonials = ({ content, font }) => {
                     speed={500}
 
                 >
-                    {content.reviews && content.reviews.map((item, index) => (
+                    {reviewsData.length && reviewsData.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <Slide slide={item} font={font} />
+                            <Slide slide={item} font={font} content={content} />
                         </SwiperSlide>
                     ))}
 

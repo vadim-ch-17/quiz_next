@@ -1,8 +1,8 @@
 import { createElement } from 'react';
-import { Days_One } from 'next/font/google';
+import { Exo_2 } from 'next/font/google';
 
-const daysOne = Days_One({
-    weight: ["400"],
+const exo2 = Exo_2({
+    weight: ["400", "500", "600", "700", "800", "900"],
     subsets: ["latin"]
 });
 
@@ -19,12 +19,12 @@ const Title = ({ content, tag, classContainer, classTitle, classSubTitle }) => {
         <div className={`container ${classContainer} relative text-center`}>
             {
                 createElement(tagNames[tag] || 'p',
-                    { className: `${daysOne.className} text-center text-darkPrimary opacity-[3%] text-title uppercase relative ${classTitle || ''}` },
+                    { className: `${exo2.className} font-bold text-center text-darkPrimary opacity-[3%] text-title uppercase relative ${classTitle || ''}` },
                     content.title
                 )
 
             }
-            {content.subTitle && <p data-wow-duration="1s" className={`${classSubTitle || ''} ${daysOne.className} wow fadeIn -mt-[8%] sm:-mt-[6%] opacity-100 text-subTitle font-dayOne text-mediumPrimary font-extrabold`}>{content.subTitle}</p>}
+            {content.subTitle && <p data-wow-duration="1s" className={`${classSubTitle || ''} ${exo2.className} wow fadeIn -mt-[8%] sm:-mt-[6%] opacity-100 text-subTitle text-mediumPrimary font-bold`}>{content.subTitle}</p>}
         </div>
     );
 }

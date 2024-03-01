@@ -85,6 +85,8 @@
         "testimonials": {
             "title": "Testimonials",
             "subTitle": "What people say",
+            "readMore": "More",
+            "readLess": "Less",
             "reviews": [
                 {
                     "name": "John Doe",

@@ -10,10 +10,10 @@ const Sections = ({ sections, font }) => {
         <>
             <Banner content={sections.banner} fonts={font} />
             <Features content={sections.features} font={font} />
-            <CallToActions content={sections.callToActions} img={"top"} font={font.daysOne} />
+            <CallToActions content={sections.callToActions} img={"top"} font={font.exo2} />
             <HowItWorks content={sections.howItWorks} fonts={font} />
             <Testimonials content={sections.testimonials} font={font.mulish} />
-            <CallToActions content={sections.callToActions} img={"bottom"} font={font.daysOne} />
+            <CallToActions content={sections.callToActions} img={"bottom"} font={font.exo2} />
             <Contacts content={sections.contacts} font={font.mulish} />
         </>
     );

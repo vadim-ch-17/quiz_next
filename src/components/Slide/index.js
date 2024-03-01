@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ResponsiveImage from "../ResponsiveImage";
 import theme from "@/styles/theme";
 import Star from "../Star";
-const Slide = ({ slide, font }) => {
+const Slide = ({ slide, font, content }) => {
     const [readMore, setReadMore] = useState(false);
     const [openRewiew, setOpenRewiew] = useState(false);
     const [review, setReview] = useState(slide.review);
+    const textRef = useRef(null);
+    const [shouldShowReadMore, setShouldShowReadMore] = useState(false);
 
+    useEffect(() => {
+        if (textRef.current) {
+            const fullHeight = textRef.current.scrollHeight - 4;
+            const clampedHeight = textRef.current.offsetHeight;
 
+            if (fullHeight > clampedHeight) {
+                setShouldShowReadMore(true);
+            }
+        }
+    }, []);
 
     const setTrimWords = () => {
         !readMore ? setOpenRewiew(true)
@@ -54,10 +65,12 @@ const Slide = ({ slide, font }) => {
                     className={`relative grid overflow-hidden transition-all duration-300 ${readMore ? "grid-rows-[1fr]" : "!grid-rows-[0fr] "}`}
                 >
 
-                    <p className={`review ${openRewiew ? '' : 'typography'} min-h-[70px] overflow-hidden text-mediumPrimary text-[14px] tracking-[0.3px] leading-6`}>
+                    <p
+                        ref={textRef}
+                        className={`review ${openRewiew ? '' : 'typography'} font-semibold min-h-[68px] overflow-hidden text-mediumPrimary text-[14px] tracking-[0.3px] leading-6`}>
                         {review}
                     </p>
-                    <a className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase" onClick={readMoreHundler}>{readMore ? 'Less' : 'More'}</a>
+                    {shouldShowReadMore && <a className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase" onClick={readMoreHundler}>{readMore ? content.readLess : content.readMore}</a>}
                 </div>
             </div>
         </div>

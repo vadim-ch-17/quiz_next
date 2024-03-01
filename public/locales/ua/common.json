@@ -85,6 +85,8 @@
         "testimonials": {
             "title": "Відгуки",
             "subTitle": "Що кажуть люди",
+            "readMore": "Читати більше",
+            "readLess": "Згорнути",
             "reviews": [
                 {
                     "name": "John Doe",
