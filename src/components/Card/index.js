@@ -9,6 +9,8 @@ const Card = ({ card, font, idx }) => {
             <ResponsiveImage
                 src={image}
                 alt={"Card"}
+                height={74}
+                width={74}
                 classes="w-[74px] h-[74px] mx-auto mb-[14px]"
             />
             <h3 className={`${exo2.className} text-xl text-center mb-[16px] font-bold`}>{title}</h3>

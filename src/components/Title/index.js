@@ -3,7 +3,8 @@ import { Exo_2 } from 'next/font/google';
 
 const exo2 = Exo_2({
     weight: ["400", "500", "600", "700", "800", "900"],
-    subsets: ["latin"]
+    subsets: ["latin"],
+    display: "swap"
 });
 
 const Title = ({ content, tag, classContainer, classTitle, classSubTitle }) => {

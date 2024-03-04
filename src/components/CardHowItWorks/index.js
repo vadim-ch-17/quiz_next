@@ -1,10 +1,5 @@
-import { Mulish } from "next/font/google";
 import useIntersectionObserver from "@/hooks/intersection-observer";
 import { useRef, useEffect } from "react";
-const mulish = Mulish({
-    weight: ["400", "600", "700", "800", "900"],
-    subsets: ["latin"]
-});
 
 const CardHowItWorksV2 = ({ cardContent, idx, refContainer }) => {
     const [ref, inView, setRoot] = useIntersectionObserver({
@@ -23,13 +18,13 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer }) => {
     return (
         <div ref={ref} className={`item h-[46px] sm:h-[100px] w-[1092px] sm:w-[1090px] pr-[160px] sm:pr-[87px] md:pr-[90px] text-right absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4 ${rotatePisition[idx]}`}>
             <p className="relative top-2/4 -translate-y-2/4 right-0">
-                <span className={`${mulish.className} ${!inView ? 'text-gray6Xl after:bg-gray6Xl before:bg-transparemt text-[40px] md:text-[69px]' : 'text-mediumPrimary after:bg-blue before:bg-blue text-[40px] md:text-[89px] '}  
+                <span className={`${!inView ? 'text-gray6Xl after:bg-gray6Xl before:bg-transparemt text-[40px] md:text-[69px]' : 'text-mediumPrimary after:bg-blue before:bg-blue text-[40px] md:text-[89px] '}  
                 after:content-[''] after:h-[18px] after:w-[18px] md:after:h-[32px] md:after:w-[32px] after:block after:rounded-full after:absolute after:-right-[30px] sm:after:-right-[50px] md:after:-right-[60px] after:top-2/4 after:-translate-y-2/4 
                 before:content-[''] before:h-[18px] before:w-[18px] md:before:h-[32px] md:before:w-[32px] before:block before:rounded-full before:absolute before:right-[140px] before:top-2/4 before:-translate-y-2/4`}>0{idx + 1} </span>
             </p>
             <div className={`${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 max-w-[240px] sm:max-w-[280px] md:max-w-[380px] lg:max-w-[500px] text-mediumPrimary absolute w-max top-[8px] md:-top-[225px] left-[89.5%] sm:left-[97%] md:left-[102%]`}>
-                <h3 className={`${mulish.className} text-[18px] md:text-[40px] font-extrabold mb-[16px] text-left`}>{title}</h3>
-                <p className={`${mulish.className}  text-[14px] md:text-[15px] text-left font-normal max-w-full xs:max-w-[260px] leading-[26px] tracking-[0.3px] mb-[20px]`}>{description}</p>
+                <h3 className={` text-[18px] md:text-[40px] font-extrabold mb-[16px] text-left`}>{title}</h3>
+                <p className={` text-[14px] md:text-[15px] text-left font-normal max-w-full xs:max-w-[260px] leading-[26px] tracking-[0.3px] mb-[20px]`}>{description}</p>
                 <picture>
                     <source
                         media="(max-width: 700px)"

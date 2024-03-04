@@ -10,6 +10,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
+  images: {
+    domains: ['secure.gravatar.com'],
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.optimization.minimizer = [

@@ -86,38 +86,7 @@
             "title": "Відгуки",
             "subTitle": "Що кажуть люди",
             "readMore": "Читати більше",
-            "readLess": "Згорнути",
-            "reviews": [
-                {
-                    "name": "John Doe",
-                    "user_avatar": "/assets/img/testimonials/user1.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
-                    "rating": 4
-                },
-                {
-                    "name": "Jane Doe",
-                    "user_avatar": "/assets/img/testimonials/user2.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. .",
-                    "rating": 5
-                },
-                {
-                    "name": "John Doe",
-                    "user_avatar": "/assets/img/testimonials/user3.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
-                    "rating": 4
-                },
-                {
-                    "name": "Jane Doe",
-                    "user_avatar": "/assets/img/testimonials/user4.webp",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
-                    "rating": 5
-                },
-                {
-                    "name": "John Doe",
-                    "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
-                    "rating": 4
-                }
-            ]
+            "readLess": "Згорнути"
         },
         "callToActions": {
             "title": "Легко створюйте вікторину на своєму веб-сайті",

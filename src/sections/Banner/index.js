@@ -1,44 +1,12 @@
-import { useMediaQuery } from "react-responsive";
-import Image from "next/image";
-import Head from "next/head";
 import ButtonsContainer from "@/components/ButtonsContainer";
 import ResponsiveImage from "@/components/ResponsiveImage";
-import { useEffect, useState } from "react";
-import 'lazysizes'
-import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 const Banner = ({ content, fonts }) => {
     const { mulish, exo2 } = fonts;
     const { title, subTitle, image } = content;
-    const imageUrlBig = `${image}900.webp`
-    const imageUrlSmall = `${image}500.webp`
-
-
-
-    const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
-    const isTablet = useMediaQuery({ query: '(max-width: 1000px)' })
-
-    let imageSrc = `${image}900.webp`
-    if (isMobile) {
-        imageSrc = `${image}500.webp`
-    } else if (isTablet) {
-        imageSrc = `${image}900.webp`
-    }
 
     return (
         <>
-            <Head>
-                <link
-                    rel="preload"
-                    href={imageSrc}
-                    as="image"
-                />
-                <link
-                    rel="preload"
-                    href={imageSrc}
-                    as="image"
-                />
-            </Head>
             <div id="banner" className="bg-darkPrimary pb-[55px] md:pb-[125px] pt-[30px] px-[15px]">
                 <div className=" max-w-[1274px] mx-auto grid grid-cols-1 lg:grid-cols-[45%_1fr]">
                     <div className="text-white flex flex-col justify-center " >
@@ -47,6 +15,8 @@ const Banner = ({ content, fonts }) => {
                             <ResponsiveImage
                                 src="/assets/img/hand.webp"
                                 alt={"Hand"}
+                                height={70}
+                                width={50}
                                 classes=" max-h-[70px] absolute absolutre bottom-[30px] right-[20%] hidden lg:block"
                             />
                         </div>
@@ -66,24 +36,14 @@ const Banner = ({ content, fonts }) => {
                                 srcSet={`${image}900.webp`}
                             />
                             <img
-                                className="lazyload max-h-[700px] "
-                                src={imageSrc}
+                                className="max-h-[700px] "
+                                src={`${image}900.webp`}
                                 alt={'Quiz plugin for WordPress'}
-                                loading="lazy"
+                                loading="eager"
+                                height={700}
+                                width={625}
                             />
                         </picture>
-                        {/* <img
-                            data-sizes="auto"
-                            data-src={imageUrl}
-                            data-srcset={` ${image}500.webp 900w, ${imageUrl} 1000w`} class="lazyload min-h-[700px]" /> */}
-                        {/* <img
-                            data-sizes="(min-width: 700px) 700px, 100vw"
-                            data-src={imageUrlBig}
-                            data-srcset={`${imageUrlSmall} 500w, ${imageUrlBig} 1000w`}
-                            className="lazyload w-auto md:w-[700px] lg:w-full h-fit max-h-[700px]"
-                            alt="Quiz plugin for WordPress"
-                            loading="lazy"
-                        /> */}
                     </div>
                 </div>
             </div>

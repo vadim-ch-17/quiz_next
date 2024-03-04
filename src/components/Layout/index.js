@@ -1,12 +1,12 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, font }) => {
     return (
         <>
-            <Header emptyNav={false} />
-            <main>{children}</main>
-            <Footer />
+            <Header emptyNav={false} font={font} />
+            <main className={font.mulish.className}>{children}</main>
+            <Footer font={font} />
         </>
     );
 }

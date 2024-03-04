@@ -14,6 +14,8 @@ const CallToActions = ({ content, img, font }) => {
                     <ResponsiveImage
                         src={`${content.image}_${img}.webp`}
                         alt={content.title}
+                        height={440}
+                        width={550}
                         classes="max-h-[440px] wow fadeIn"
                         data-wow-duration="0.6s"
                     />

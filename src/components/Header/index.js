@@ -6,27 +6,23 @@ import Navigation from "../Navigation";
 import { SpanStyle } from "./style";
 import Link from "next/link";
 import Button from "../Button";
-import { Mulish } from "next/font/google";
 
-const mulish = Mulish({
-    weight: ["400", "600", "700", "800", "900"],
-    subsets: ["latin"],
-});
-
-const Header = ({ emptyNav }) => {
+const Header = ({ emptyNav, font }) => {
     const { t } = useTranslation("common");
     const [isOpenNav, setIsOpenNav] = useState(false);
     const eventHundler = () => {
         setIsOpenNav(!isOpenNav);
     };
     return (
-        <header className={`${mulish.className} sticky top-0 z-30 shadow-3xl bg-darkPrimary font-mulish ${isOpenNav ? "rounded-b-[20px]" : ""}`}>
+        <header className={`${font.mulish.className} sticky top-0 z-30 shadow-3xl bg-darkPrimary font-mulish ${isOpenNav ? "rounded-b-[20px]" : ""}`}>
             <nav className="container-lg px-4 h-full justify-between py-0 lg:flex lg:py-4">
                 <div className="flex items-center justify-between py-2 lg:py-0">
                     <Link href="/">
                         <ResponsiveImage
                             src={"/assets/img/logo_header.webp"}
                             alt={"Codevery Quiz"}
+                            height={76}
+                            width={116}
                             classes={"max-h-[69px] max-w-[104px] lg:max-h-[76px] lg:max-w-[116px] "}
                         />
                     </Link>

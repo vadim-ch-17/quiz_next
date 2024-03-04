@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ResponsiveImage from "../ResponsiveImage";
+import Image from "next/image";
 import theme from "@/styles/theme";
 import Star from "../Star";
 const Slide = ({ slide, font, content }) => {
@@ -35,10 +36,12 @@ const Slide = ({ slide, font, content }) => {
 
     return (
         <div className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] shadow-card me-9 ms-9 min-h-[383px] w-auto`}>
-            {slide.user_avatar && <ResponsiveImage
+            {slide.user_avatar && <Image
                 src={slide.user_avatar}
                 alt={slide.name}
-                classes="avatar w-[70px] h-[70px] mx-auto rounded-full mb-[5px]"
+                height={70}
+                width={70}
+                className="avatar mx-auto rounded-full mb-[5px]"
             />}
             <h2 className="text-mediumPrimary text-lg tracking-[0.3px] text-center font-bold mb-[10px]">{slide.name}</h2>
             <div className="stars flex flex-row items-center gap-x-2 justify-center mb-10">
@@ -58,6 +61,8 @@ const Slide = ({ slide, font, content }) => {
                     src={'/assets/img/qq.svg'}
                     alt={"Slide"}
                     type={"svg"}
+                    height={50}
+                    width={62}
                     classes="qq absolute -left-[13px] -top-[26px] w-auto h-[50px]"
                 />
 
@@ -70,7 +75,7 @@ const Slide = ({ slide, font, content }) => {
                         className={`review ${openRewiew ? '' : 'typography'} font-semibold min-h-[68px] overflow-hidden text-mediumPrimary text-[14px] tracking-[0.3px] leading-6`}>
                         {review}
                     </p>
-                    {shouldShowReadMore && <a className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase" onClick={readMoreHundler}>{readMore ? content.readLess : content.readMore}</a>}
+                    {shouldShowReadMore && <button className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase text-left" aria-label={`Button ${readMore ? content.readLess : content.readMore}`} onClick={readMoreHundler}>{readMore ? content.readLess : content.readMore}</button>}
                 </div>
             </div>
         </div>
