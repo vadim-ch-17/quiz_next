@@ -4,6 +4,7 @@ import Contacts from "./Contacts";
 import Banner from "./Banner";
 import Testimonials from "./Testimonials";
 import HowItWorks from "./HowItWorks";
+
 const Sections = ({ sections, font }) => {
 
     return (

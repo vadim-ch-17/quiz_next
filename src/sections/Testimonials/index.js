@@ -15,6 +15,7 @@ const Testimonials = ({ content, font }) => {
     const swiperRef = useRef(null);
     const [reviewsData, setReviewsData] = useState([]);
     const [slideChanged, setSlideChanged] = useState(false);
+
     const { reviews } = useLandingContext();
 
     useEffect(() => {
@@ -31,9 +32,7 @@ const Testimonials = ({ content, font }) => {
             setSlideChanged(false);
         }
     }, [slideChanged]);
-    const handleSlideChange = () => {
-        setSlideChanged(true);
-    };
+
 
     return reviewsData.length && (
         <div id="testimonials" className="bg-gray4Xl pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
@@ -42,8 +41,6 @@ const Testimonials = ({ content, font }) => {
                 <Swiper
                     ref={swiperRef}
                     modules={[Navigation, Pagination]}
-                    // spaceBetween={0}
-                    // slidesPerView={3}
                     navigation={{
                         nextEl: '.button-next',
                         prevEl: '.button-prev',
@@ -61,23 +58,28 @@ const Testimonials = ({ content, font }) => {
                             slidesPerView: 3,
                             spaceBetween: '-20px',
                             centeredSlides: true,
-                            loop: false,
+                            loop: true,
                             speed: 1000,
                             autoplay: {
-                                delay: 0,
-                                pauseOnMouseEnter: true,        // stop autoplay when hovering
-                                disableOnInteraction: false,    // restart autoplay when hover is removed
-                                reverseDirection: true,         // reverse the autoplay direction
+                                delay: 300,
+                                pauseOnMouseEnter: true,
+                                disableOnInteraction: false,
+                                reverseDirection: true,
                             },
                         },
                     }}
-                    // loop={false}
-                    // loopAdditionalSlides={1}
                     pagination={{ el: '.dots', clickable: true, dynamicBullets: true, dynamicMainBullets: 2, type: 'bullets' }}
-                    // speed={500}
-                    onSlideChange={() => handleSlideChange()}
+
+                    onSlideChangeTransitionStart={(swiper) => {
+                        setSlideChanged(true);
+                    }}
 
                 >
+                    {reviewsData.length && reviewsData.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <Slide slide={item} font={font} content={content} slideChanged={slideChanged} />
+                        </SwiperSlide>
+                    ))}
                     {reviewsData.length && reviewsData.map((item, index) => (
                         <SwiperSlide key={index}>
                             <Slide slide={item} font={font} content={content} slideChanged={slideChanged} />

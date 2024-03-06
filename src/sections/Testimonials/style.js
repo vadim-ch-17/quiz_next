@@ -8,12 +8,15 @@ export const TestimonialsContainer = styled.div`
     .swiper-wrapper {
         padding: 70px 0;
     }
-   
+   .swiper-slide {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+   }
     .swiper-slide.swiper-slide-active {
         position: relative;
         z-index: 10;
         transform: scale(1.2);
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease-in-out;
         .slide{
             margin: 0px 20px;
         }

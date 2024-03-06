@@ -3,12 +3,18 @@ import ResponsiveImage from "../ResponsiveImage";
 import Image from "next/image";
 import theme from "@/styles/theme";
 import Star from "../Star";
+import { setTrimWords, readMoreHundler, getReviewImage } from "./componentUtils";
+
 const Slide = ({ slide, font, content, slideChanged }) => {
+
     const [readMore, setReadMore] = useState(false);
     const [openRewiew, setOpenRewiew] = useState(false);
     const [review, setReview] = useState(slide.review);
-    const textRef = useRef(null);
+    const [imageExists, setImageExists] = useState(false);
     const [shouldShowReadMore, setShouldShowReadMore] = useState(false);
+
+    const textRef = useRef(null);
+
     const { rating, name, user_avatar } = slide;
 
     useEffect(() => {
@@ -20,38 +26,32 @@ const Slide = ({ slide, font, content, slideChanged }) => {
             setShouldShowReadMore(fullHeight > clampedHeight);
 
         }
-
+        getReviewImage(setImageExists, user_avatar, name);
     }, []);
 
     useEffect(() => {
         setReadMore(false);
-        setTrimWords()
+        setTrimWords(readMore, setOpenRewiew)
     }, [slideChanged]);
 
-    const setTrimWords = () => {
-        !readMore ? setOpenRewiew(true)
-            : setTimeout(() => {
-                setOpenRewiew(false);
-            }, 300);
-    }
-
-    const readMoreHundler = () => {
-        setReadMore(!readMore);
-        setTrimWords()
-
-    };
 
     return (
         <div data-open={slideChanged} className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] shadow-card me-9 ms-9 min-h-[383px] w-auto`}>
-            {/* {slide.user_avatar && <Image
-                src={slide.user_avatar}
-                alt={slide.name}
-                height={70}
-                width={70}
-                className="avatar mx-auto rounded-full mb-[5px]"
-            />} */}
-            <div className="h-[70px] w-[70px] mx-auto rounded-full mb-[5px] bg-blue text-white font-extrabold flex justify-center items-center text-4xl
-            ">{name.slice(0, 1).toUpperCase()}</div>
+            {imageExists ? (
+                <Image
+                    src={user_avatar.split("?")[0]}
+                    alt={name}
+                    height={70}
+                    width={70}
+                    className="avatar mx-auto rounded-full mb-[5px]"
+                />
+            )
+                : (
+                    <div className="h-[70px] w-[70px] mx-auto rounded-full mb-[5px] bg-blue text-white font-extrabold flex justify-center items-center text-4xl">
+                        {name.slice(0, 1).toUpperCase()}
+                    </div>
+                )
+            }
             <h2 className="text-mediumPrimary text-lg tracking-[0.3px] text-center font-bold mb-[10px]">{name}</h2>
             <div className="stars flex flex-row items-center gap-x-2 justify-center mb-10">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -84,7 +84,7 @@ const Slide = ({ slide, font, content, slideChanged }) => {
                         className={`review ${openRewiew ? '' : 'typography'} font-semibold min-h-[68px] overflow-hidden text-mediumPrimary text-[14px] tracking-[0.3px] leading-6`}>
                         {review}
                     </p>
-                    {shouldShowReadMore && <button className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase text-left" aria-label={`Button ${readMore ? content.readLess : content.readMore}`} onClick={readMoreHundler}>{readMore ? content.readLess : content.readMore}</button>}
+                    {shouldShowReadMore && <button className="text-blue font-normal text-[14px] tracking-[0.3px] hover:cursor-pointer hover:text-hoverBlue transition-colors duration-300 leading-6 uppercase text-left" aria-label={`Button ${readMore ? content.readLess : content.readMore}`} onClick={() => readMoreHundler(setReadMore, readMore, setOpenRewiew)}>{readMore ? content.readLess : content.readMore}</button>}
                 </div>
             </div>
         </div>
