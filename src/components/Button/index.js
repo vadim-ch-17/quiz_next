@@ -10,7 +10,7 @@ const Button = ({ children, href, as, type, classes, fontSize, label, onClick })
             aria-label={label}
             onClick={onClick}
         >
-            <span className={`relative z-10 font-extrabold ${fontSize || 'text-lg'} tracking-normal`}>
+            <span className={`relative z-10 font-bold ${fontSize || 'text-lg'} tracking-[0.03px]`}>
                 {children}
             </span>
         </StyledButton>

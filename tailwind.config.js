@@ -40,6 +40,7 @@ module.exports = {
         gray4Xl: '#F0F3F8',
         gray5Xl: '#949CB6',
         gray6Xl: '#B8BECA',
+        gray7Xl: '#AEB5C6',
         error: '#FF0000',
         success: '#008000',
         gold: '#FEC34B'

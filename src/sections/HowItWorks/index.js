@@ -13,9 +13,9 @@ const HowItWorks = ({ content, fonts }) => {
 
 
     return (
-        <div ref={fixedSection} id="how_it_works" className="bg-gray3Xl pb-[72px] md:pb-[136px] pt-[24px] md:pt-[70px]">
+        <div ref={fixedSection} id="how_it_works" className="bg-gray3Xl pt-[24px] md:pt-[70px]">
             <Title content={{ title: content.title, subTitle: content.subTitle }} tag="h2" classContainer="mb-0 md:-mb-[60px] z-10" />
-            <div className="h-[70ch] md:h-[165ch] lg:h-[170ch] relative">
+            <div className="h-[70ch] md:h-[165ch] lg:h-[200ch] relative">
                 <div className="sticky top-[150px] sm:top-0 max-w-[1100px] mx-auto overflow-hidden">
 
                     <div className="relative -top-[310px] md:top-0 w-[800px] sm:w-[1000px] h-[1000px]">

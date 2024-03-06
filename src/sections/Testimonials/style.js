@@ -4,7 +4,7 @@ import theme from "@/styles/theme";
 export const TestimonialsContainer = styled.div`
     max-width: 1200px;
     margin: 0 auto;
-    // padding: 0 15px;
+
     .swiper-wrapper {
         padding: 70px 0;
     }

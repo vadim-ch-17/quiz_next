@@ -1,25 +1,32 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, use } from "react";
 import ResponsiveImage from "../ResponsiveImage";
 import Image from "next/image";
 import theme from "@/styles/theme";
 import Star from "../Star";
-const Slide = ({ slide, font, content }) => {
+const Slide = ({ slide, font, content, slideChanged }) => {
     const [readMore, setReadMore] = useState(false);
     const [openRewiew, setOpenRewiew] = useState(false);
     const [review, setReview] = useState(slide.review);
     const textRef = useRef(null);
     const [shouldShowReadMore, setShouldShowReadMore] = useState(false);
+    const { rating, name, user_avatar } = slide;
 
     useEffect(() => {
+
         if (textRef.current) {
             const fullHeight = textRef.current.scrollHeight - 4;
             const clampedHeight = textRef.current.offsetHeight;
 
-            if (fullHeight > clampedHeight) {
-                setShouldShowReadMore(true);
-            }
+            setShouldShowReadMore(fullHeight > clampedHeight);
+
         }
+
     }, []);
+
+    useEffect(() => {
+        setReadMore(false);
+        setTrimWords()
+    }, [slideChanged]);
 
     const setTrimWords = () => {
         !readMore ? setOpenRewiew(true)
@@ -35,15 +42,17 @@ const Slide = ({ slide, font, content }) => {
     };
 
     return (
-        <div className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] shadow-card me-9 ms-9 min-h-[383px] w-auto`}>
-            {slide.user_avatar && <Image
+        <div data-open={slideChanged} className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] shadow-card me-9 ms-9 min-h-[383px] w-auto`}>
+            {/* {slide.user_avatar && <Image
                 src={slide.user_avatar}
                 alt={slide.name}
                 height={70}
                 width={70}
                 className="avatar mx-auto rounded-full mb-[5px]"
-            />}
-            <h2 className="text-mediumPrimary text-lg tracking-[0.3px] text-center font-bold mb-[10px]">{slide.name}</h2>
+            />} */}
+            <div className="h-[70px] w-[70px] mx-auto rounded-full mb-[5px] bg-blue text-white font-extrabold flex justify-center items-center text-4xl
+            ">{name.slice(0, 1).toUpperCase()}</div>
+            <h2 className="text-mediumPrimary text-lg tracking-[0.3px] text-center font-bold mb-[10px]">{name}</h2>
             <div className="stars flex flex-row items-center gap-x-2 justify-center mb-10">
                 {Array.from({ length: 5 }).map((_, i) => (
                     <Star
@@ -51,7 +60,7 @@ const Slide = ({ slide, font, content }) => {
                         type={"rating"}
                         height={24}
                         width={24}
-                        color={`${slide.rating > i ? theme.colors.gold : theme.colors.grayLg}`}
+                        color={`${rating > i ? theme.colors.gold : theme.colors.grayLg}`}
                         border={"transparent"}
                     />
                 ))}
