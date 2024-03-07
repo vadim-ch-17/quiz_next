@@ -48,7 +48,7 @@ const Header = ({ emptyNav, font }) => {
                             isOpenNav={isOpenNav}
                             setIsOpenNav={setIsOpenNav}
                         />}
-                        <LanguageSwitcher />
+                        <LanguageSwitcher setIsOpenNav={setIsOpenNav} />
                         <Button
                             as="a"
                             type="pink"

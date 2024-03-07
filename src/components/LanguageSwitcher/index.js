@@ -5,13 +5,14 @@ import { FaChevronDown } from "react-icons/fa6";
 
 
 
-const LanguageSwitcher = ({ classContainer, ...props }) => {
+const LanguageSwitcher = ({ classContainer, setIsOpenNav, ...props }) => {
     const { i18n } = useTranslation();
     const router = useRouter();
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
         Cookies.set('selectedLanguage', language);
         router.push(router.asPath, router.asPath, { locale: language });
+        setIsOpenNav && setIsOpenNav(false);
     };
     const languages = {
         ua: 'Українська',
