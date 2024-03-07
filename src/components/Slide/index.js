@@ -6,16 +6,16 @@ import Star from "../Star";
 import { setTrimWords, readMoreHundler, getReviewImage } from "./componentUtils";
 
 const Slide = ({ slide, font, content, slideChanged }) => {
+    const { userReview, rating, name, user_avatar } = slide;
 
     const [readMore, setReadMore] = useState(false);
     const [openRewiew, setOpenRewiew] = useState(false);
-    const [review, setReview] = useState(slide.review);
+    const [review, setReview] = useState(userReview);
     const [imageExists, setImageExists] = useState(false);
     const [shouldShowReadMore, setShouldShowReadMore] = useState(false);
 
     const textRef = useRef(null);
 
-    const { rating, name, user_avatar } = slide;
 
     useEffect(() => {
 
@@ -36,7 +36,7 @@ const Slide = ({ slide, font, content, slideChanged }) => {
 
 
     return (
-        <div data-open={slideChanged} className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] shadow-card me-9 ms-9 min-h-[383px] w-auto`}>
+        <div data-open={slideChanged} className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] me-9 ms-9 min-h-[383px] w-auto`}>
             {imageExists ? (
                 <Image
                     src={user_avatar.split("?")[0]}

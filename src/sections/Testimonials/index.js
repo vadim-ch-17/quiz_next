@@ -59,7 +59,7 @@ const Testimonials = ({ content, font }) => {
                             spaceBetween: '-20px',
                             centeredSlides: true,
                             loop: true,
-                            speed: 1000,
+                            speed: 500,
                             autoplay: {
                                 delay: 300,
                                 pauseOnMouseEnter: true,
@@ -70,7 +70,7 @@ const Testimonials = ({ content, font }) => {
                     }}
                     pagination={{ el: '.dots', clickable: true, dynamicBullets: true, dynamicMainBullets: 2, type: 'bullets' }}
 
-                    onSlideChangeTransitionStart={(swiper) => {
+                    onSlideChangeTransitionEnd={(swiper) => {
                         setSlideChanged(true);
                     }}
 

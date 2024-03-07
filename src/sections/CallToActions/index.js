@@ -3,7 +3,7 @@ import ButtonsContainer from "@/components/ButtonsContainer";
 
 const CallToActions = ({ content, img, font }) => {
     return (
-        <div className="bg-lightPrimary py-[38px]">
+        <div className="bg-lightPrimary pt-2.5 pb-7">
             <div className="container grid grid-cols-1 lg:grid-cols-2">
                 <div className="flex flex-col justify-center msax-w-[545px]">
                     <p className={`wow fadeIn ${font.className} text-white leading-[60px] tracking-[0.03px] text-[25px] md:text-[50px] font-bold mb-[29px] md:mb-[68px] text-center lg:text-left`} data-wow-duration="0.2s">{content.title}</p>

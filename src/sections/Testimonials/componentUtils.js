@@ -10,7 +10,7 @@ export const getDataReviews = (reviews) => {
         const rating = $(element).find('.wporg-ratings').attr('data-rating');
         const reviewBody = $(element).find('.review-body').text();
 
-        tempReviewsData.push({ title, name: reviwerName, rating: +rating, review: reviewBody, user_avatar: reviwerImage });
+        tempReviewsData.push({ title, name: reviwerName, rating: +rating, userReview: reviewBody, user_avatar: reviwerImage });
     });
     return tempReviewsData
 }

@@ -15,12 +15,12 @@ const HowItWorks = ({ content, fonts }) => {
     return (
         <div ref={fixedSection} id="how_it_works" className="bg-gray3Xl pt-[24px] md:pt-[70px]">
             <Title content={{ title: content.title, subTitle: content.subTitle }} tag="h2" classContainer="mb-0 md:-mb-[60px] z-10" />
-            <div className="h-[70ch] md:h-[165ch] lg:h-[200ch] relative">
+            <div className="h-[75ch] md:h-[165ch] lg:h-[200ch] relative">
                 <div className="sticky top-[150px] sm:top-0 max-w-[1100px] mx-auto overflow-hidden">
 
                     <div className="relative -top-[310px] md:top-0 w-[800px] sm:w-[1000px] h-[1000px]">
                         <div className={`w-[900px] lg:w-[300px] h-[300px] rotate-0 sm:rotate-[360deg] absolute  sm:left-0 top-[9.5rem] md:-top-[3.5rem] sm:-top-[25px] bg-gray-gradient z-10`}></div>
-                        <div className={`w-[300px] lg:w-[500px] h-[400px] rotate-[219deg] lg:rotate-[272deg] absolute -left-1/4 bottom-0 bg-gray-gradient z-10`}></div>
+                        <div className={`w-[300px] lg:w-[500px] h-[400px] rotate-[180deg] sm:rotate-[219deg] lg:rotate-[272deg] absolute -left-[33%] sm:-left-1/4 bottom-0 bg-gray-gradient z-10`}></div>
                         <div
                             className="absolute border-2 border-dashed border-gray6Xl h-[800px] sm:h-full w-full rounded-full top-2/4 -translate-x-2/4 -translate-y-2/4 -left-[41%] sm:-left-[34%] lg:-left-[14%]">
                         </div>

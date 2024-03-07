@@ -5,6 +5,7 @@ const colors = {
     hoverPink: '#DD88FE',
     blue: '#7777EF',
     darkPrimary: '#15154C',
+    mediumPrimary: '#181F7B33',
     hoverBlue: '#9D9DFD',
     white: '#FFFFFF',
     black: '#000000',

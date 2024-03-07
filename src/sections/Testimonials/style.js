@@ -9,16 +9,21 @@ export const TestimonialsContainer = styled.div`
         padding: 70px 0;
     }
    .swiper-slide {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+    .slide{
+        transform: scale(0.4);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
    }
     .swiper-slide.swiper-slide-active {
         position: relative;
         z-index: 10;
-        transform: scale(1.2);
-        transition: transform 0.3s ease-in-out;
         .slide{
+            opacity: 1;
+            transform: scale(1.2);
             margin: 0px 20px;
+            box-shadow: 10px 10px 30px 0px ${theme.colors.mediumPrimary};
+            transition: all 0.3s ease-in-out;
         }
         .qq{
             filter: invert(65%) sepia(84%) saturate(5216%) hue-rotate(249deg) brightness(101%) contrast(82%);
@@ -27,12 +32,20 @@ export const TestimonialsContainer = styled.div`
     }
     .swiper-slide.swiper-slide-prev{
         .slide{
+            opacity: 1;
+            transform: scale(1);
             margin-right: 0px;
+            box-shadow: 10px 10px 30px 0px ${theme.colors.mediumPrimary};
+            transition: all 0.3s ease-in-out;
         }
     }
     .swiper-slide.swiper-slide-next{
         .slide{
+            opacity: 1;
+            transform: scale(1);
             margin-left: 0px;
+            box-shadow: 10px 10px 30px 0px ${theme.colors.mediumPrimary};
+            transition: all 0.3s ease-in-out;
         }
     }
     .swiper-button-disabled{
@@ -65,8 +78,9 @@ export const TestimonialsContainer = styled.div`
             padding: 35px 0 70px 20px;
         }
         .swiper-slide.swiper-slide-active {
-            transform: scale(1);
+            
             .slide{
+                transform: scale(1);
                 margin: 0px;
             }
         }
