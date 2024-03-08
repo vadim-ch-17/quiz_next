@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import LanguageSwitcher from "../LanguageSwitcher";
 import ResponsiveImage from "../ResponsiveImage";
@@ -10,11 +10,44 @@ import Button from "../Button";
 const Header = ({ emptyNav, font }) => {
     const { t } = useTranslation("common");
     const [isOpenNav, setIsOpenNav] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+    const header = useRef();
+
+    useEffect(() => {
+        if (typeof window === "undefined") return
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll, { passive: true });
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isOpenNav) {
+            document.addEventListener("click", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, [isOpenNav]);
+
+    const handleClickOutside = e => {
+        if (header.current.contains(e.target)) {
+            return;
+        }
+        setIsOpenNav(false);
+    };
     const eventHundler = () => {
         setIsOpenNav(!isOpenNav);
     };
     return (
-        <header className={`${font.mulish.className} sticky top-0 z-30 shadow-3xl bg-darkPrimary font-mulish ${isOpenNav ? "rounded-b-[20px]" : ""}`}>
+        <header ref={header} className={`${font.mulish.className} fixed w-full lg:sticky top-0 z-30 shadow-3xl bg-darkPrimary ${scrollY > 100 ? 'lg:bg-darkPrimary/90' : 'lg:bg-darkPrimary'} font-mulish ${isOpenNav ? "rounded-b-[20px] transition-all delay-150" : ""}`}>
             <nav className="container-lg px-4 h-full justify-between py-0 lg:flex lg:py-4">
                 <div className="flex items-center justify-between py-2 lg:py-0">
                     <Link href="/">

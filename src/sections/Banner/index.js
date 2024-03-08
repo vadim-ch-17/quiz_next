@@ -17,7 +17,7 @@ const Banner = ({ content, fonts }) => {
                                 alt={"Hand"}
                                 height={70}
                                 width={50}
-                                classes=" max-h-[70px] absolute absolutre bottom-[30px] right-[20%] hidden lg:block"
+                                classes=" max-h-[70px] absolute absolutre bottom-[30px] right-[30%] hidden lg:block"
                             />
                         </div>
 

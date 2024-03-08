@@ -20,7 +20,7 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer, fixedSection, slide,
 
     useEffect(() => {
         const isLargeScreen = window.matchMedia("(min-width: 768px)").matches;
-        const speedRotate = isLargeScreen ? 50 : 15;
+        const speedRotate = isLargeScreen ? 50 : 45;
         const scrollBetween = isLargeScreen ? [0, 185] : [0, 140];
         const rootElement = document.querySelector('.target');
 
@@ -45,9 +45,9 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer, fixedSection, slide,
                     </p>
                 </div>
             </div>
-            <div className={`${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 max-w-[240px] sm:max-w-[280px] md:max-w-[380px] lg:max-w-[500px] text-mediumPrimary absolute w-max top-[18px] sm:top-[35px] md:-top-[225px] -left-[80px] sm:left-[70%] md:left-[102%]`}>
+            <div className={`${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 max-w-60 xs:max-w-72 sm:max-w-96 md:max-w-[470px] lg:max-w-[500px] text-mediumPrimary absolute w-max top-[18px] sm:top-[35px] md:-top-[225px] -left-[80px] sm:left-0 md:left-[102%]`}>
                 <h3 className={` text-[18px] md:text-[30px] font-extrabold mb-[16px] text-left`}>{title}</h3>
-                <p className={` text-[14px] md:text-[15px] text-left font-normal max-w-full xs:max-w-[260px] leading-[26px] tracking-[0.3px] mb-[20px]`}>{description}</p>
+                <p className={` text-[14px] md:text-[15px] text-left font-normal max-w-full xs:max-w-[460px] leading-[26px] tracking-[0.3px] mb-[20px]`}>{description}</p>
                 <picture>
                     <source
                         media="(max-width: 700px)"
@@ -58,7 +58,7 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer, fixedSection, slide,
                         srcSet={`${image}full.webp`}
                     />
                     <img
-                        className="max-h-[295px]"
+                        className="max-h-[400px]"
                         src={`${image}full.webp`}
                         alt={title}
                         loading="lazy"
