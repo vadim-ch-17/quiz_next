@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
     if (req.method === 'GET') {
-        const response = await fetch('https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request%5Bslug%5D=codevery-quiz');
+        const response = await fetch(process.env.URL_REVIEWS);
         const data = await response.json();
         res.status(200).json(data);
     }

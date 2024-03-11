@@ -17,11 +17,13 @@ const Title = ({ content, tag, classContainer, classTitle, classSubTitle }) => {
         h6: "h6",
     };
     return (
-        <div className={`container ${classContainer} relative text-center`}>
+        <div className={`container ${exo2.className} ${classContainer} relative text-center`}>
             {
                 createElement(tagNames[tag] || 'p',
-                    { className: `${exo2.className} font-bold text-center text-darkPrimary opacity-[3%] text-title uppercase relative ${classTitle || ''}` },
-                    content.title
+                    {
+                        className: `relative font-bold text-center text-darkPrimary opacity-[3%] text-title uppercase relative ${classTitle || ''} `
+                    },
+                    content.title,
                 )
 
             }

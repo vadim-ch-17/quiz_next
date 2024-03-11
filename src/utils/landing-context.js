@@ -11,7 +11,6 @@ export const LandingProvider = ({ children }) => {
     const [modalContent, setModalContent] = useState(null);
     const [acceptCookies, setAcceptCookies] = useState(Cookies.get('privacy') === 'accepted' || false);
     const [rejectCookies, setRejectCookies] = useState(false);
-    const [slide, setSlide] = useState('card-0');
     const [reviews, setReviews] = useState(null);
 
     const value = {
@@ -20,14 +19,12 @@ export const LandingProvider = ({ children }) => {
         isOpenModal,
         modalContent,
         rejectCookies,
-        slide,
         reviews,
         setAcceptCookies,
         setLoader,
         setIsOpenModal,
         setModalContent,
         setRejectCookies,
-        setSlide,
         setReviews,
     };
     return (

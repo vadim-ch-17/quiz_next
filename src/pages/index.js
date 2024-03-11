@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { useEffect } from "react";
 import fetch from "node-fetch";
 import { Mulish, Exo_2 } from "next/font/google";
@@ -10,6 +10,7 @@ import { useLandingContext } from "@/utils/landing-context";
 import Sections from "@/sections";
 import wow from "@/libs/wow";
 import UpButton from "@/components/UpButon";
+import Seo from "@/components/Seo";
 
 const mulish = Mulish({
   weight: ["400", "600", "700", "800", "900"],
@@ -27,6 +28,8 @@ const exo2 = Exo_2({
 export default function Home({ dataReviews, ...props }) {
   const { t } = useTranslation("common");
   const sections = t("sections", { returnObjects: true });
+  const seo = t("seo", { returnObjects: true });
+
   const { acceptCookies, modalContent, rejectCookies, setReviews, setFonts } = useLandingContext();
 
   //dynamic import modal
@@ -44,11 +47,7 @@ export default function Home({ dataReviews, ...props }) {
 
   return (
     <Layout font={{ mulish, exo2 }}>
-      <Head>
-        <title>{t('seo.title')}</title>
-        <meta name="description" content={t('seo.description')} />
-        <meta name="keywords" content={t('seo.keywords')} />
-      </Head>
+      <Seo seo={seo} />
       <Sections sections={sections} font={{ mulish, exo2 }} />
       <UpButton />
       {ModalDynamic && <ModalDynamic>

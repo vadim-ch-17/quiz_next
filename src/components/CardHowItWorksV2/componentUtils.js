@@ -18,9 +18,9 @@ const scrollToActive = (scrolled) => {
 }
 
 export const scrollPosition = (speedRotate, scrollBetween, fixedSection, slideContainer, e) => {
-    const scroll = Math.round(
+    const scroll = fixedSection.current ? Math.round(
         (window.pageYOffset - fixedSection.current.offsetTop + 55) / 10,
-    );
+    ) : 0;
 
     const scrolled = (scroll * 100) / speedRotate;
 

@@ -15,11 +15,11 @@ const useIntersectionObserver = (options) => {
         const observer = new IntersectionObserver(([entry]) => {
             setIntersecting(entry.isIntersecting);
             if (entry.isIntersecting) {
-                setCurrent(entry.target.dataset.active);
+                setCurrent(entry.target);
                 setIntersectingElement(entry.target);
+
             }
         }, { ...options, root });
-
         observer.observe(ref.current);
 
         return () => {
