@@ -1,9 +1,9 @@
-FROM node:20.5.0
-WORKDIR /usr/src/app
+FROM node:20.5.0-alpine
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 
