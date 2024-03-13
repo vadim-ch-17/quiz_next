@@ -20,8 +20,8 @@ const Seo = ({ seo }) => {
                 site_name: title,
             }}
             robotsProps={{
-                noindex: false,
-                nofollow: false,
+                noindex: true,
+                nofollow: true,
             }}
             noindex={true}
             nofollow={true}
