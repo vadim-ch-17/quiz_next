@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, use } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import ResponsiveImage from "../ResponsiveImage";
 import Image from "next/image";
 import theme from "@/styles/theme";
@@ -91,4 +91,7 @@ const Slide = ({ slide, font, content, slideChanged }) => {
     );
 }
 
-export default Slide;
+// export default Slide;
+const MemoizedSlide = React.memo(Slide);
+
+export default MemoizedSlide;

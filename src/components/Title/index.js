@@ -1,3 +1,4 @@
+import React from 'react';
 import { createElement } from 'react';
 import { Exo_2 } from 'next/font/google';
 
@@ -33,3 +34,6 @@ const Title = ({ content, tag, classContainer, classTitle, classSubTitle }) => {
 }
 
 export default Title;
+
+const MemoizedTitle = React.memo(Title);
+export { MemoizedTitle };
