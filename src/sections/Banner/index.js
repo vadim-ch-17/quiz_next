@@ -1,8 +1,7 @@
 import ButtonsContainer from "@/components/ButtonsContainer";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
-const Banner = ({ content, fonts }) => {
-    const { mulish, exo2 } = fonts;
+const Banner = ({ content }) => {
     const { title, subTitle, image } = content;
 
     return (
@@ -11,7 +10,7 @@ const Banner = ({ content, fonts }) => {
                 <div className=" max-w-[1274px] mx-auto grid grid-cols-1 lg:grid-cols-[45%_1fr]">
                     <div className="text-white flex flex-col justify-center " >
                         <div className="relative">
-                            <h1 className={` ${exo2.className} text-[50px] md:text-[70px] lg:text-[90px] font-bold tracking-[0.3px] uppercase mb-[14px] pr-[50px] leading-[55px] md:leading-[100px]`} dangerouslySetInnerHTML={{ __html: title }}></h1>
+                            <h1 className={`font-exo2 text-[50px] md:text-[70px] lg:text-[90px] font-bold tracking-[0.3px] uppercase mb-[14px] pr-[50px] leading-[55px] md:leading-[100px]`} dangerouslySetInnerHTML={{ __html: title }}></h1>
                             <ResponsiveImage
                                 src="/assets/img/hand.webp"
                                 alt={"Hand"}
@@ -21,7 +20,7 @@ const Banner = ({ content, fonts }) => {
                             />
                         </div>
 
-                        <p className={` ${mulish.className} text-[15px] font-semibold mb-[25px] md:mb-[49px] tracking-[0.3px] leading-[28px] max-w-[490px]`}>{subTitle}</p>
+                        <p className={` font-mulish text-[15px] font-semibold mb-[25px] md:mb-[49px] tracking-[0.3px] leading-[28px] max-w-[490px]`}>{subTitle}</p>
                         <ButtonsContainer classContainer="justify-center lg:justify-start" btnDownload="pink" btnDemo="blue" />
                     </div>
 

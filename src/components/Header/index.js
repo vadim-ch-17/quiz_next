@@ -7,7 +7,7 @@ import { SpanStyle } from "./style";
 import Link from "next/link";
 import Button from "../Button";
 
-const Header = ({ emptyNav, font }) => {
+const Header = ({ emptyNav }) => {
     const { t } = useTranslation("common");
     const [isOpenNav, setIsOpenNav] = useState(false);
     const [scrollY, setScrollY] = useState(true);
@@ -49,7 +49,7 @@ const Header = ({ emptyNav, font }) => {
         setIsOpenNav(!isOpenNav);
     };
     return (
-        <header ref={header} className={`${font.mulish.className} fixed w-full lg:sticky top-0 z-30 shadow-3xl bg-darkPrimary ${!scrollY ? 'lg:bg-darkPrimary' : 'lg:bg-darkPrimary/90'} font-mulish ${isOpenNav ? "rounded-b-[20px] transition-all delay-150" : ""}`}>
+        <header ref={header} className={` font-mulish fixed w-full lg:sticky top-0 z-30 shadow-3xl bg-darkPrimary ${!scrollY ? 'lg:bg-darkPrimary' : 'lg:bg-darkPrimary/90'} ${isOpenNav ? "rounded-b-[20px] transition-all delay-150" : ""}`}>
             <nav className="container-lg px-4 h-full justify-between py-0 lg:flex lg:py-4 mx-auto">
                 <div className="flex items-center justify-between py-2 lg:py-0">
                     <Link href="/">

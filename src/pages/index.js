@@ -1,7 +1,5 @@
-import { NextSeo } from "next-seo";
 import { useEffect } from "react";
 import fetch from "node-fetch";
-import { Mulish, Exo_2 } from "next/font/google";
 import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -10,32 +8,18 @@ import { useLandingContext } from "@/utils/landing-context";
 import Sections from "@/sections";
 import wow from "@/libs/wow";
 import UpButton from "@/components/UpButon";
-import Seo from "@/components/Seo";
-
-const mulish = Mulish({
-  weight: ["400", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  display: "swap"
-});
-
-const exo2 = Exo_2({
-  weight: ["400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  display: "swap"
-});
 
 
 export default function Home({ dataReviews, ...props }) {
   const { t } = useTranslation("common");
   const sections = t("sections", { returnObjects: true });
-  const seo = t("seo", { returnObjects: true });
+  // const seo = t("seo", { returnObjects: true });
 
   const { acceptCookies, modalContent, rejectCookies, setReviews, setFonts } = useLandingContext();
 
   //dynamic import modal
   const ModalDynamic = modalContent ? dynamic(() => import(`@/components/Modal`)) : null;
   const ModalContent = modalContent ? dynamic(() => import(`@/components/${modalContent}`)) : null;
-  const DynamicCookiesMsg = !acceptCookies ? dynamic(() => import("@/components/CookiesMsg")) : null;
 
   useEffect(() => {
     setReviews(dataReviews);
@@ -46,14 +30,12 @@ export default function Home({ dataReviews, ...props }) {
   }, [])
 
   return (
-    <Layout font={{ mulish, exo2 }}>
-      <Seo seo={seo} />
-      <Sections sections={sections} font={{ mulish, exo2 }} />
+    <Layout >
+      <Sections sections={sections} />
       <UpButton />
       {ModalDynamic && <ModalDynamic>
         {ModalContent && <ModalContent />}
       </ModalDynamic>}
-      {DynamicCookiesMsg && !rejectCookies ? <DynamicCookiesMsg /> : null}
     </Layout>
   );
 }

@@ -13,12 +13,11 @@ import MemoizedSlide from "@/components/Slide";
 import { TestimonialsContainer } from "./style";
 import { getDataReviews } from "./componentUtils";
 
-const Testimonials = ({ content, font }) => {
+const Testimonials = ({ content }) => {
     const swiperRef = useRef(null);
     const [reviewsData, setReviewsData] = useState([]);
     const [slideChanged, setSlideChanged] = useState(false);
     const memoizedContent = useMemo(() => content, [content]);
-    const memoizedFont = useMemo(() => font, [font]);
     const memoizedTitleContent = useMemo(() => ({
         title: content.title,
         subTitle: content.subTitle
@@ -83,12 +82,12 @@ const Testimonials = ({ content, font }) => {
                 >
                     {reviewsData.length && reviewsData.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <MemoizedSlide slide={item} font={memoizedFont} content={memoizedContent} slideChanged={slideChanged} />
+                            <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
                         </SwiperSlide>
                     ))}
                     {reviewsData.length && reviewsData.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <MemoizedSlide slide={item} font={memoizedFont} content={memoizedContent} slideChanged={slideChanged} />
+                            <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
                         </SwiperSlide>
                     ))}
 

@@ -5,7 +5,7 @@ import theme from "@/styles/theme";
 import Star from "../Star";
 import { setTrimWords, readMoreHundler, getReviewImage } from "./componentUtils";
 
-const Slide = ({ slide, font, content, slideChanged }) => {
+const Slide = ({ slide, content, slideChanged }) => {
     const { userReview, rating, name, user_avatar } = slide;
 
     const [readMore, setReadMore] = useState(false);
@@ -36,7 +36,7 @@ const Slide = ({ slide, font, content, slideChanged }) => {
 
 
     return (
-        <div data-open={slideChanged} className={`slide ${font.className} bg-white rounded-[40px] px-[52px] py-[33px] me-9 ms-9 min-h-[383px] w-auto`}>
+        <div data-open={slideChanged} className={`slide font-mulish bg-white rounded-[40px] px-[52px] py-[33px] me-9 ms-9 min-h-[383px] w-auto`}>
             {imageExists ? (
                 <Image
                     src={user_avatar.split("?")[0]}

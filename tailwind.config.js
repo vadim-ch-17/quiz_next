@@ -54,7 +54,8 @@ module.exports = {
       },
       fontFamily: {
         // "dayOne": ["Days One", "sans-serif"],
-        // mulish: ["Mulish", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
+        'exo2': ['"Exo 2"', 'sans-serif'],
       },
       boxShadow: {
         default: '0px 10px 30px 0px rgba(24, 31, 123, 0.2)',
@@ -64,6 +65,7 @@ module.exports = {
       fontSize: {
         'title': 'clamp(2.125rem, 10vw, 6.875rem)',
         'subTitle': 'clamp(25px, 6vw, 40px)',
+        quizTitle: 'clamp(2.625rem, calc(2.625rem + ((1vw - 0.48rem) * 8.4135)), 3.25rem)',
       },
       keyframes: {
         align: {

@@ -5,7 +5,7 @@ import { useLandingContext } from "@/utils/landing-context";
 import Button from "../Button";
 import theme from "@/styles/theme";
 
-const Form = ({ inputs, font }) => {
+const Form = ({ inputs }) => {
     const { setIsOpenModal, setModalContent, setLoader } = useLandingContext();
     const { register, watch, reset, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(validationForm(inputs)) });
 
@@ -29,10 +29,10 @@ const Form = ({ inputs, font }) => {
         <>
             <div className="form relative container !max-w-[568px] mx-auto">
                 <div className="form">
-                    <form onSubmit={handleSubmit(onSubmit)} className={font.className}>
+                    <form onSubmit={handleSubmit(onSubmit)} className={`font-medium`}>
                         {inputs.length && inputs.map((input, idx) =>
                             input.type === 'submit' ? (
-                                <Button data-wow-duration="0.6s" key={idx} as="button" type={input.type} label={"Submit form"} classes={`wow fadeIn ${Object.keys(errors).length === 0 ? 'hover:cursor-pointer hover:bg-white hover:text-visited' : 'opacity-25 pointer-events-none'} w-full mt-[25px] md:mt-[35px]`}>{input.value}</Button>
+                                <Button data-wow-duration="0.6s" key={idx} as="button" type={'blue'} label={"Submit form"} classes={`wow fadeIn ${Object.keys(errors).length === 0 ? 'hover:cursor-pointer hover:bg-white hover:text-visited' : 'opacity-25 pointer-events-none'} w-full mt-[25px] md:mt-[35px]`}>{input.value}</Button>
                             ) : (
 
                                 <div data-wow-duration={`0.${2 + idx}s`} className={`wow fadeIn w-full relative ${idx !== 2 && 'mb-[25px]'} `} key={idx}>
