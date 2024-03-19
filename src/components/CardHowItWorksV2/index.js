@@ -33,7 +33,7 @@ const CardHowItWorksV2 = ({ cardContent, idx, refContainer, fixedSection }) => {
     return (
         <>
             <div ref={slideContainer} className={`slide-container h-full w-full absolute -left-[535px] sm:-left-[593px] rotate-0 transition-all duration-300`}>
-                <p ref={ref} data-active={`card-${idx}`} className={`item w-[1050px] sm:w-[1090px] pr-[142px] sm:pr-[87px] md:pr-[90px] text-right absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4 ${rotatePisition[idx]}`}>
+                <p ref={ref} data-active={`card-${idx}`} className={`item w-[1050px] sm:w-[1092px] pr-[142px] sm:pr-[87px] md:pr-[90px] text-right absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4 ${rotatePisition[idx]}`}>
                     <span className={`relative ${!inView ? 'text-gray6Xl after:bg-gray6Xl before:bg-transparemt text-[40px] md:text-[69px]' : 'text-mediumPrimary after:bg-blue before:bg-blue text-[40px] md:text-[89px] '}  
     after:content-[''] after:h-[18px] after:z-10 after:w-[18px] md:after:h-[32px] md:after:w-[32px] after:block after:rounded-full after:absolute after:-right-[30px] sm:after:-right-[53px] md:after:-right-[60px] after:top-2/4 after:-translate-y-2/4 after:transition-all after:duration-300
     before:content-[''] before:h-[18px] before:w-[18px] md:before:h-[32px] md:before:w-[32px] before:block before:rounded-full before:absolute before:right-[140px] before:top-2/4 before:-translate-y-2/4 before:transition-all before:duration-300 transition-colors duration-300`}>0{idx + 1} </span>

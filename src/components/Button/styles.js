@@ -64,6 +64,13 @@ const buttonTypeColors = (type) => {
         bgHoverColor: theme.colors.hoverBlue,
         hoverColor: theme.colors.white,
       };
+    case 'disabled':
+      return {
+        color: theme.colors.darkGrey,
+        bgColor: theme.colors.lightGrey,
+        bgHoverColor: theme.colors.lightGrey,
+        hoverColor: theme.colors.darkGrey,
+      };
     default:
       return {
         color: theme.colors.white,

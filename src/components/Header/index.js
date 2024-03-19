@@ -86,7 +86,7 @@ const Header = ({ emptyNav }) => {
                         <LanguageSwitcher setIsOpenNav={setIsOpenNav} />
                         <Button
                             as="a"
-                            type="pink"
+                            colorType="pink"
                             href={t("buttons.download.url")}
                             classes="flex justify-center items-center hover:cursor-pointer self-center w-full sm:w-auto mb-[60px] lg:mb-0 ml-0 lg:ml-6 min-w-[182px] tracking-[.03em]"
                             label={t("buttons.download.title")}

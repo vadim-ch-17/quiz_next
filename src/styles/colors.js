@@ -9,6 +9,7 @@ const colors = {
     hoverBlue: '#9D9DFD',
     white: '#FFFFFF',
     black: '#000000',
+    mediumBlack: '#2b2b2b',
     grey: '#F5F5F5',
     darkGrey: '#A9A9A9',
     lightGrey: '#D3D3D3',
@@ -19,6 +20,7 @@ const colors = {
     metal: '#949cb6',
     error: '#FF0000',
     success: '#008000',
+    successMedium: '#00bc09',
     gold: '#FEC34B'
 };
 

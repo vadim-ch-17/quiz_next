@@ -33,10 +33,13 @@ module.exports = {
         hoverBlue: '#9D9DFD',
         white: '#FFFFFF',
         black: '#000000',
+        madiumBlack: '#2B2B2B',
+        black2Xl: '#2A2A2A',
         grey: '#F5F5F5',
         extraDarkGray: "#444A59",
         darkGrey: '#A9A9A9',
         lightGrey: '#f0f3f8',
+        grayLg: '#ebebeb',
         grayXl: '#D9D9D9',
         gray2Xl: '#E9EAED',
         gray3Xl: '#E3E8F1',
@@ -45,12 +48,16 @@ module.exports = {
         gray6Xl: '#B8BECA',
         gray7Xl: '#AEB5C6',
         error: '#FF0000',
+        mediumError: '#d30000',
         success: '#008000',
+        successLight: '#00bc09',
+        successDark: '#345C00',
         gold: '#FEC34B'
 
       },
       backgroundImage: {
-        'gray-gradient': "linear-gradient(180deg, #E3E8F1 61.16%, rgba(227, 232, 241, 0) 100%)"
+        'gray-gradient': "linear-gradient(180deg, #E3E8F1 61.16%, rgba(227, 232, 241, 0) 100%)",
+        'certificate': 'linear-gradient(110deg, white 0%, white, 57%, #15154c 57%, #15154c 100%)'
       },
       fontFamily: {
         // "dayOne": ["Days One", "sans-serif"],
@@ -60,7 +67,8 @@ module.exports = {
       boxShadow: {
         default: '0px 10px 30px 0px rgba(24, 31, 123, 0.2)',
         card: '10px 10px 30px 0px #181F7B33',
-
+        cardMsg: '0 0 17px rgb(0 0 0/15%)',
+        certificete: '0 0 24px rgb(0 0 0/18%)'
       },
       fontSize: {
         'title': 'clamp(2.125rem, 10vw, 6.875rem)',

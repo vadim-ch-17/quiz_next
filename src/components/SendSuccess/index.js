@@ -17,7 +17,7 @@ const SendSuccess = () => {
             />
             <h2 className={` text-center text-[25px] sm:text-4xl mb-5 font-bold`}>{title}</h2>
             <p className={`text-center text-lg sm:text-xl`}>{message}</p>
-            <Button as="button" type="blue" classes={` !text-lg mt-9 uppercase`} onClick={() => setIsOpenModal(false)}>{button}</Button>
+            <Button as="button" colorType="blue" classes={` !text-lg mt-9 uppercase`} onClick={() => setIsOpenModal(false)}>{button}</Button>
         </div>
     );
 }

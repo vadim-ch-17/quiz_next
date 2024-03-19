@@ -35,7 +35,7 @@ const CookiesMsg = () => {
             <p className={` text-xs mb-[30px] tracking-[0.3px] leading-5`}>{message}</p>
             <div className="flex gap-4">
                 {buttons.length > 0 && buttons.map((btn, index) => {
-                    return <Button key={index} as="button" type={btn.type} classes={`!min-h-[50px] w-full !min-w-0 `} fontSize="!text-[14px]" label={btn.title} onClick={actions[btn.action]}>{btn.title}</Button>
+                    return <Button key={index} as="button" colorType={btn.type} classes={`!min-h-[50px] w-full !min-w-0 `} fontSize="!text-[14px]" label={btn.title} onClick={actions[btn.action]}>{btn.title}</Button>
                 })}
             </div>
         </div>
