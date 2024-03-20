@@ -60,13 +60,13 @@ const Quiz = () => {
 
                     </div>
                     <form className={`${start && !last ? 'block' : 'hidden'} max-w-[650px] mx-auto mb-[51px]`} onSubmit={handleSubmit(onSubmit)}>
-                        <h2 className={`font-exo2 font-medium text-center text-quizTitle uppercase text-black leading-[65px] tracking-[0.05px] mb-[85px] `}>{questions[step].question}</h2>
+                        <h2 className={`font-exo2 font-medium text-center text-quizTitle uppercase text-darkPrimary leading-[65px] tracking-[0.05px] mb-[85px] `}>{questions[step].question}</h2>
                         <Controller
                             name={`step${step + 1}`}
                             control={control}
                             defaultValue=""
                             render={({ field }) => (
-                                <div className={`grid ${questions[step].withImage ? 'grid-cols-2' : 'grid-cols-1'} gap-[17px] justify-center`}>
+                                <div className={`grid ${questions[step].withImage ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'} gap-[17px] justify-center`}>
                                     {questions[step].answers.map((item, idx) => (
                                         <QuizCard key={idx}
                                             quiz={item}
@@ -84,7 +84,7 @@ const Quiz = () => {
                     </form>
                     {last && (
                         <div>
-                            <h2 className="text-quizTitle font-medium text-center mb-6 md:mb-[68px]">{final[score].title}</h2>
+                            <h2 className="text-2xl sm:text-quizTitle font-medium text-center mb-6 md:mb-[68px]">{final[score].title}</h2>
                             <p className="text-center font-normal text-lg mb-10" dangerouslySetInnerHTML={{ __html: final[score].points }}></p>
                             {score < 15 && <p className="text-center font-normal text-lg mb-6">{final[score].message}</p>}
                             {score < 15 ? <ResponsiveImage
