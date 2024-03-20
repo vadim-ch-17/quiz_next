@@ -11,16 +11,20 @@ const Layout = ({ children }) => {
     const { t } = useTranslation("common");
     const seo = t("seo", { returnObjects: true });
 
-    const { acceptCookies, rejectCookies } = useLandingContext();
+    const { acceptCookies, rejectCookies, modalContent } = useLandingContext();
 
     const DynamicCookiesMsg = !acceptCookies ? dynamic(() => import("@/components/CookiesMsg")) : null;
+    const ModalDynamic = modalContent ? dynamic(() => import(`@/components/Modal`)) : null;
+    const ModalContent = modalContent ? dynamic(() => import(`@/components/${modalContent}`)) : null;
     return (
         <div className="pt-[84px] lg:pt-0">
             <Seo seo={seo} />
             <Header emptyNav={false} />
             <main className=" font-mulish">{children}</main>
             {DynamicCookiesMsg && !rejectCookies ? <DynamicCookiesMsg /> : null}
-
+            {ModalDynamic && <ModalDynamic>
+                {ModalContent && <ModalContent />}
+            </ModalDynamic>}
             <Footer />
         </div>
     );

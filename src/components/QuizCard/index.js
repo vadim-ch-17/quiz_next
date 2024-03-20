@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 
 const QuizCard = ({ quiz, idx, field, isOneSelected, setIsOneSelected, withImage }) => {
+    const { t } = useTranslation('quiz')
     const [correct, setCorrect] = useState(false)
     const [checked, setChecked] = useState(false)
 
@@ -50,7 +52,7 @@ const QuizCard = ({ quiz, idx, field, isOneSelected, setIsOneSelected, withImage
             <div className={`w-full px-[28px] py-9 bg-white color-madiumBlack rounded-b-[10px] grid ${checked && field.value === quiz.answer ? 'grid-rows-[1fr] -mt-[7px] transition-all duration-500' : 'grid-rows-[0fr] -mt-[75px]'} items-center text-[.875em] shadow-cardMsg overflow-hidden box-border `}>
                 <div className="min-h-0">
                     <span className={`${correct ? 'text-successLight' : 'text-mediumError'} font-bold text-2xl`}>
-                        {correct ? 'Correct' : 'Incorrect'}
+                        {correct ? t('answers.correct') : t('answers.incorrect')}
                     </span>
                     <p>
                         {quiz.message}

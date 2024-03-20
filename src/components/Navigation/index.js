@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { toAnchor } from "./componentUtils";
+import { useRouter } from "next/router";
 
 const Navigation = ({
     classContainer,
@@ -12,6 +13,7 @@ const Navigation = ({
     ...props
 }) => {
     const { t } = useTranslation("navigation");
+    const router = useRouter();
     const navItems = t("items", { returnObjects: true });
 
     const styleItems = {
@@ -32,7 +34,7 @@ const Navigation = ({
                         >
                             <Link
                                 href={item.url}
-                                onClick={item?.modal ? openModal : (e) => toAnchor(e, setIsOpenNav, isOpenNav)}
+                                onClick={item?.modal ? openModal : (e) => toAnchor(e, setIsOpenNav, isOpenNav, router)}
                                 data-anchor={item?.url}
                                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
                                 aria-label={t(item.name)}

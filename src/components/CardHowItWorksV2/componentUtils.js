@@ -23,7 +23,7 @@ export const scrollPosition = (speedRotate, scrollBetween, fixedSection, slideCo
     ) : 0;
 
     const scrolled = (scroll * 100) / speedRotate;
-
+    if (!slideContainer.current) return;
     if (scrolled >= scrollBetween[0] && scrolled <= scrollBetween[1]) {
         slideContainer.current.style.transform = `rotate(-${scrollToActive(scrolled)}deg)`;
     }

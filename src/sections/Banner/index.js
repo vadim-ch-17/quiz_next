@@ -1,5 +1,6 @@
 import ButtonsContainer from "@/components/ButtonsContainer";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import Image from "next/image";
 
 const Banner = ({ content }) => {
     const { title, subTitle, image } = content;
@@ -25,24 +26,31 @@ const Banner = ({ content }) => {
                     </div>
 
                     <div className="flex justify-center">
-                        <picture>
+                        <Image
+                            src={`${image}600.webp`}
+                            alt={'Quiz plugin for WordPress'}
+                            loading="eager"
+                            height={700}
+                            width={625}
+                            className="max-h-[700px] " />
+                        {/* <picture>
                             <source
-                                media="(max-width: 700px)"
-                                srcSet={`${image}500.webp`}
+                                media="(max-width: 500px)"
+                                srcSet={`${image}400.webp`}
                             />
                             <source
                                 media="(max-width: 1000px)"
-                                srcSet={`${image}900.webp`}
+                                srcSet={`${image}600.webp`}
                             />
                             <img
                                 className="max-h-[700px] "
-                                src={`${image}900.webp`}
+                                src={`${image}600.webp`}
                                 alt={'Quiz plugin for WordPress'}
                                 loading="eager"
                                 height={700}
                                 width={625}
                             />
-                        </picture>
+                        </picture> */}
                     </div>
                 </div>
             </div>

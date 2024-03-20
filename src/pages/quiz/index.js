@@ -47,15 +47,15 @@ const Quiz = () => {
             <div className="bg-gray3Xl">
                 <div className="container mx-auto pt-[102px] pb-[112px] max-w-[760px]">
                     <div className={`${start ? 'hidden' : 'block'}`}>
-                        <h1 className={`font-exo2 font-bold text-center text-[85px] uppercase text-pink leading-[100px] tracking-[0.05px] mb-[85px]`}>Dogs quiz (demo)</h1>
-                        <p className="font-exo2 font-bold text-center text-[45px] text-darkPrimary leading-[54px] tracking-[0.03px] mb-[47px]">How well do you know them?</p>
+                        <h1 className={`font-exo2 font-bold text-center text-[85px] uppercase text-pink leading-[100px] tracking-[0.05px] mb-[85px]`}>{t('title')}</h1>
+                        <p className="font-exo2 font-bold text-center text-[45px] text-darkPrimary leading-[54px] tracking-[0.03px] mb-[47px]">{t('subTitle')}</p>
                         <ResponsiveImage
                             src="/assets/img/quiz/main-image-quiz.webp"
                             alt={"Dog"}
                             height={467}
                             width={700}
                             classes="mx-auto rounded-[20px] mb-[34px]" />
-                        <Button as={'button'} classes={`!max-w-fit mx-auto shadow-2xl`} onClick={() => handleTest()}>{start ? 'Next' : 'Start'}</Button>
+                        <Button as={'button'} classes={`!max-w-fit mx-auto shadow-2xl`} onClick={() => handleTest()}>{start ? t("buttons.next") : t("buttons.start")}</Button>
 
 
                     </div>
@@ -79,7 +79,7 @@ const Quiz = () => {
                                 </div>
                             )}
                         />
-                        <Button as={'button'} type="submit" colorType={!isOneSelected ? 'disabled' : ''} disabled={!isOneSelected} classes={`${!isOneSelected && 'cursor-no-drop'} !max-w-fit mx-auto shadow-2xl mt-[85px]`}>{start ? 'Next' : 'Start'}</Button>
+                        <Button as={'button'} type="submit" colorType={!isOneSelected ? 'disabled' : ''} disabled={!isOneSelected} classes={`${!isOneSelected && 'cursor-no-drop'} !max-w-fit mx-auto shadow-2xl mt-[85px]`}>{start ? t("buttons.next") : t("buttons.start")}</Button>
 
                     </form>
                     {last && (

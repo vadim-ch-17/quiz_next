@@ -24,7 +24,8 @@ export const sendEmail = async (data, certificateRef) => {
                 });
         });
 }
-
-export const schema = yup.object().shape({
-    email: yup.string().email().required().matches(/\.+/, "Email must contain a dot"),
-});
+export const validationForm = (input) => {
+    return yup.object({
+        email: yup.string().email(input.email).required(input.required).matches(/\.+/, input.symbol),
+    }).required()
+}

@@ -1,3 +1,4 @@
+// import dynamic from "next/dynamic";
 import CallToActions from "./CallToActions";
 import Features from "./Features";
 import Contacts from "./Contacts";

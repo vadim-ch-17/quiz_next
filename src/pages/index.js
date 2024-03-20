@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import fetch from "node-fetch";
-import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Layout from "@/components/Layout";
@@ -13,13 +12,8 @@ import UpButton from "@/components/UpButon";
 export default function Home({ dataReviews, ...props }) {
   const { t } = useTranslation("common");
   const sections = t("sections", { returnObjects: true });
-  // const seo = t("seo", { returnObjects: true });
 
-  const { acceptCookies, modalContent, rejectCookies, setReviews, setFonts } = useLandingContext();
-
-  //dynamic import modal
-  const ModalDynamic = modalContent ? dynamic(() => import(`@/components/Modal`)) : null;
-  const ModalContent = modalContent ? dynamic(() => import(`@/components/${modalContent}`)) : null;
+  const { setReviews } = useLandingContext();
 
   useEffect(() => {
     setReviews(dataReviews);
@@ -33,9 +27,6 @@ export default function Home({ dataReviews, ...props }) {
     <Layout >
       <Sections sections={sections} />
       <UpButton />
-      {ModalDynamic && <ModalDynamic>
-        {ModalContent && <ModalContent />}
-      </ModalDynamic>}
     </Layout>
   );
 }

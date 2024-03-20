@@ -1,4 +1,6 @@
 {
+    "title": "DOGS QUIZ (DEMO)",
+    "subTitle": "How well do you know them?",
     "questions": [
         {
             "question": "What is the name of the smallest dog breed?",
@@ -180,5 +182,31 @@
             "image": "https://media.giphy.com/media/3o7TKz5v8zJlXpF1C0/giphy.gif",
             "message": "You can send it to your friend. The discount can be used only once in the specified period of time."
         }
+    },
+    "certificat": {
+        "form": {
+            "title": "We can send you this coupon by email",
+            "placeholder": "Enter Email",
+            "button": "Send",
+            "errors": {
+                "required": "Email is required",
+                "email": "Please enter a valid email",
+                "symbol": "Email must contain a dot"
+            }
+        },
+        "title": "CERTIFICATE",
+        "promo": "Promo code",
+        "sale": "Sale",
+        "valid": "Valid until",
+        "months": "April"
+    },
+    "answers": {
+        "correct": "Correct",
+        "incorrect": "Incorrect"
+    },
+    "buttons": {
+        "start": "Start",
+        "next": "Next",
+        "submit": "Submit"
     }
 }

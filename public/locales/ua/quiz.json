@@ -1,184 +1,212 @@
 {
+    "title": "ТЕСТ З СОБАКАМИ (ДЕМО)",
+    "subTitle": "Наскільки добре ти їх знаєш?",
     "questions": [
         {
-            "question": "What is the name of the smallest dog breed?",
+            "question": "Яке ім'я має найдрібніша порода собак?",
             "withImage": true,
             "answers": [
                 {
-                    "answer": "Corgi",
+                    "answer": "Коргі",
                     "image": "/assets/img/quiz/1/Corgi.webp",
                     "correct": false,
-                    "message": "While Corgis are small in size, their overall body structure and weight classify them as small to medium-sized dogs, not the absolute smallest breed."
+                    "message": "Хоча Коргі мають маленький розмір, їхня загальна структура тіла і вага класифікують їх як собак невеликого або середнього розміру, а не найменшу породу."
                 },
                 {
-                    "answer": "Chihuahua",
+                    "answer": "Чіхуахуа",
                     "image": "/assets/img/quiz/1/Chihuahua.webp",
                     "correct": true,
-                    "message": "Weighing in at a maximum of six pounds, the Chihuahua is the world's smallest dog breed. They might be small, but they tend to think they are big dogs, and they are fiercely protective of their owners."
+                    "message": "Вага максимально досягає шести фунтів, чіхуахуа - найменша порода собак у світі. Вони можуть бути маленькими, але зазвичай вони думають, що вони великі собаки, і вони з жагою захищають своїх господарів."
                 },
                 {
-                    "answer": "Poodle",
+                    "answer": "Пудель",
                     "image": "/assets/img/quiz/1/Poodle.webp",
                     "correct": false,
-                    "message": "Poodles come in different sizes, including standard, miniature, and toy. While the toy-sized Poodles can be small, they are not the smallest dog breed."
+                    "message": "Пудлі існують у різних розмірах, включаючи стандартний, мініатюрний та іграшковий. Хоча пудлі малого розміру можуть бути маленькими, вони не є найдрібнішою породою собак."
                 },
                 {
-                    "answer": "Pug",
+                    "answer": "Мопс",
                     "image": "/assets/img/quiz/1/Pug.webp",
                     "correct": false,
-                    "message": "Pugs are small and compact dogs, but they are not the smallest breed. They typically weigh between 14-18 pounds (6.4-8.2 kg)."
+                    "message": "Мопси - це маленькі і компактні собаки, але вони не є найменшою породою. Зазвичай вони важать від 14 до 18 фунтів (6,4-8,2 кг)."
                 }
             ]
         },
         {
-            "question": "Why do dogs chase their tails?",
+            "question": "Чому собаки ловлять свої хвости?",
             "withImage": false,
             "answers": [
                 {
-                    "answer": "For exercise",
+                    "answer": "Для заняться",
                     "correct": false,
-                    "message": "This is a correct but not a complete answer. Dogs chase their tails for many reasons. This includes boredom, excitement, dealing with fleas, expelling some energy (especially in puppies), or something serious like an injury."
+                    "message": "Це правильна, але неповна відповідь. Собаки ловлять свої хвости з багатьох причин. Це включає нудьгу, збудження, боротьбу з блохами, витрачання енергії (особливо у цуценят) або серйозне, таке як травма."
                 },
                 {
-                    "answer": "If they're anxious",
+                    "answer": "Якщо вони тривожні",
                     "correct": false,
-                    "message": "This is a correct but not a complete answer. Dogs chase their tails for many reasons. This includes boredom, excitement, dealing with fleas, expelling some energy (especially in puppies), or something serious like an injury."
+                    "message": "Це правильна, але неповна відповідь. Собаки ловлять свої хвости з багатьох причин. Це включає нудьгу, збудження, боротьбу з блохами, витрачання енергії (особливо у цуценят) або серйозне, таке як травма."
                 },
                 {
-                    "answer": "If they have fleas",
+                    "answer": "Якщо вони мають блохи",
                     "correct": false,
-                    "message": "This is a correct but not a complete answer. Dogs chase their tails for many reasons. This includes boredom, excitement, dealing with fleas, expelling some energy (especially in puppies), or something serious like an injury."
+                    "message": "Це правильна, але неповна відповідь. Собаки ловлять свої хвости з багатьох причин. Це включає нудьгу, збудження, боротьбу з блохами, витрачання енергії (особливо у цуценят) або серйозне, таке як травма."
                 },
                 {
-                    "answer": "All of the above",
+                    "answer": "Всі вищезазначені відповіді",
                     "correct": true,
-                    "message": "Dogs chase their tails for many reasons. This includes: boredom, excitement, dealing with fleas, expelling some energy (especially in puppies), or something serious like an injury."
+                    "message": "Собаки ловлять свої хвости з багатьох причин. Це включає: нудьгу, збудження, боротьбу з блохами, витрачання енергії (особливо у цуценят) або серйозне, таке як травма."
                 }
             ]
         },
         {
-            "question": "What breed is Scooby-Doo?",
+            "question": "Якої породи собака Скубі-Ду?",
             "withImage": true,
             "answers": [
                 {
-                    "answer": "German shepherd",
+                    "answer": "Німецький вівчар",
                     "image": "/assets/img/quiz/3/German-Shepherd.webp",
                     "correct": false,
-                    "message": "German Shepherds are a popular breed known for their intelligence, loyalty, and versatility. Scooby-Doo is famously known for his large size and goofy personality, which are not characteristic of German Shepherds."
+                    "message": "Німецькі вівчарки є популярною породою, відомою своєю інтелектом, вірністю та універсальністю. Скубі-Ду відомий своїм великим розміром і глупим характером, які не є характерними для німецьких вівчарок."
                 },
                 {
-                    "answer": "Dalmatian",
+                    "answer": "Далматин",
                     "image": "/assets/img/quiz/3/Dalmatian.webp",
                     "correct": false,
-                    "message": "While Dalmatians are known for their unique spotted coat and energetic nature, they do not share the same physical features or traits as Scooby-Doo."
+                    "message": "Хоча далматинці відомі своїм унікальним плямистим хутром і енергійною природою, вони не мають тих же фізичних рис і характеристик, що і Скубі-Ду."
                 },
                 {
-                    "answer": "Great Dane",
+                    "answer": "Великий данський",
                     "image": "/assets/img/quiz/3/Great-Dane.webp",
                     "correct": true,
-                    "message": "The character was created by Iwao Takamoto, animator at Hanna-Barbera Productions. Takamoto studied the breed when developing the character, but took plenty of liberties for the fictional series. The average male Great Dane can weigh up to 200 pounds and stand up to 34 inches tall with all four paws on the floor. It's no wonder Scooby was always wanting a snack!"
+                    "message": "Персонаж був створений Івао Такамото, аніматором в Hanna-Barbera Productions. Такамото вивчав породу, розробляючи персонажа, але брав багато свободи для вигадки умовного серіалу. Середня вага чоловічого великого данського може сягати 200 фунтів, а висота стоячи на всіх чотирьох лапах може досягати 34 дюймів. Не дивно, що Скубі завжди хотів перекусити!"
                 },
                 {
-                    "answer": "Airedale terrier",
+                    "answer": "Ердельтер'єр",
                     "image": "/assets/img/quiz/3/Airedale-Terrier.webp",
                     "correct": false,
-                    "message": "Airedale Terriers, also known as the 'King of Terriers', are intelligent, courageous, and versatile dogs. However, Scooby-Doo is known for his massive size and easygoing personality, which are not typical of Airedale Terriers."
+                    "message": "Ердельтер'єри, також відомі як 'Король тер'єрів', є розумними, мужніми і універсальними собаками. Однак Скубі-Ду відомий своїм масштабним розміром і безтурботним характером, які не є типовими для ердельтер'єрів."
                 }
             ]
         },
         {
-            "question": "Why do dogs have wet noses?",
+            "question": "Чому у собак завжди вологі носи?",
             "withImage": false,
             "answers": [
                 {
-                    "answer": "Because they always have colds",
+                    "answer": "Тому що вони завжди хворіють",
                     "correct": false,
-                    "message": "While it's true that a dog's nose can become wetter when they are unwell or have nasal congestion, a wet nose is a natural and normal condition for healthy dogs."
+                    "message": "Хоча правда, що ніс собаки може ставати вологішим, коли вони хворіють або мають застуду, вологий ніс є природним і нормальним станом для здорових собак."
                 },
                 {
-                    "answer": "Because they are always licking them",
+                    "answer": "Тому що вони завжди облизують їх",
                     "correct": false,
-                    "message": "While dogs do lick their noses occasionally as part of their grooming behavior, the wetness of their noses is not primarily because of continuous licking."
+                    "message": "Хоча собаки іноді облизують свої носи як частину їх природної гігієни, вологість їх носів не обов'язково виникає від постійного облизування."
                 },
                 {
-                    "answer": "To help absorb scent chemicals",
+                    "answer": "Для кращого поглинання хімічних речовин запаху",
                     "correct": true,
-                    "message": "Your dog's wet nose helps maximize their sense of smell and cool them off."
+                    "message": "Вологий ніс вашої собаки допомагає максимізувати їхній зімовий почуття і охолоджує їх."
                 },
                 {
-                    "answer": "Because it's how they sweat",
+                    "answer": "Тому що так вони потіють",
                     "correct": false,
-                    "message": "Dogs do not primarily sweat through their noses. Unlike humans, dogs do not have sweat glands on their noses for thermoregulation."
+                    "message": "Собаки не потіють в основному через свій ніс. На відміну від людей, собаки не мають потових залоз на своїх носах для терморегуляції."
                 }
             ]
         },
         {
-            "question": "What’s usually the most popular dog?",
+            "question": "Яка зазвичай найпопулярніша собака?",
             "withImage": true,
             "answers": [
                 {
-                    "answer": "Labrador Retriever",
+                    "answer": "Лабрадор-ретривер",
                     "image": "/assets/img/quiz/5/Labrador-Retriever.webp",
                     "correct": true,
-                    "message": "This big, friendly dog is a favorite pet. Years ago, their job was to retrieve game and help fishermen pull in their nets. Now, because they're so playful and sweet, they're an ideal family dog. They get along well with kids and other pets. They're kind, outgoing, and happy to be part of a busy family."
+                    "message": "Ця велика, дружня собака є улюбленцем. Років тому їх завданням було виносити дичину і допомагати рибалкам витягувати свої мережі. Тепер, через те, що вони такі грайливі та милі, вони ідеально підходять для сімейних собак. Вони добрі, виходять на зв'язок з дітьми та іншими домашніми тваринами. Вони щасливі бути частиною активної сім'ї."
                 },
                 {
-                    "answer": "German Shepherd",
+                    "answer": "Німецький вівчар",
                     "image": "/assets/img/quiz/5/German-Sheherd.webp",
                     "correct": false,
-                    "message": "German Shepherds are highly intelligent and versatile dogs commonly used for police and military work, search and rescue, and service roles. But they are not typically the most popular breed."
+                    "message": "Німецькі вівчарки - це дуже розумні і універсальні собаки, які часто використовуються в поліції та армії, пошуково-рятувальні та службові цілі. Але вони зазвичай не є найпопулярнішою породою."
                 },
                 {
-                    "answer": "Chihuahua",
+                    "answer": "Чіхуахуа",
                     "image": "/assets/img/quiz/5/Chihuahua.webp",
                     "correct": false,
-                    "message": "Chihuahuas, known for their small size and big personalities. While they are adored by some people or families who prefer smaller dogs, their popularity does not match that of Labrador Retrievers."
+                    "message": "Чіхуахуа відомі своїм малим розміром і великими характерами. Хоча їх обожнюють деякі люди або сім'ї, які віддають перевагу меншим собакам, їх популярність не дорівнює популярності лабрадор-ретриверів."
                 },
                 {
-                    "answer": "Greyhound",
+                    "answer": "Грейхаунд",
                     "image": "/assets/img/quiz/5/Greyhound.webp",
                     "correct": false,
-                    "message": "Greyhounds are elegant, athletic dogs primarily known for their incredible speed. While they have their devoted admirers, they are not typically the most popular dog breed in terms of overall popularity."
+                    "message": "Грейхаунди - елегантні, спортивні собаки, головним чином відомі своєю неймовірною швидкістю. Хоча у них є свої прихильники, вони зазвичай не є найпопулярнішою породою собак за загальною популярністю."
                 }
             ]
         }
     ],
     "final": {
         "0": {
-            "title": "Better luck next time!",
-            "points": "You got <strong>0</strong> points",
+            "title": "Удачі наступного разу!",
+            "points": "Ти отримав <strong>0</strong> балів",
             "image": "https://media.giphy.com/media/3orif43L8j0FOZsqM8/giphy.gif",
-            "message": "It seems that you need to pay more attention to mankind’s best friends."
+            "message": "Схоже, що тобі потрібно приділити більше уваги найкращим друзям людини."
         },
         "5": {
-            "title": "Better luck next time!",
-            "points": "You got <strong>5</strong> points",
+            "title": "Удачі наступного разу!",
+            "points": "Ти отримав <strong>5</strong> балів",
             "image": "https://media.giphy.com/media/3orif43L8j0FOZsqM8/giphy.gif",
-            "message": "It seems that you need to pay more attention to mankind’s best friends."
+            "message": "Схоже, що тобі потрібно приділити більше уваги найкращим друзям людини."
         },
         "10": {
-            "title": "Better luck next time!",
-            "points": "You got <strong>10</strong> points",
+            "title": "Удачі наступного разу!",
+            "points": "Ти отримав <strong>10</strong> балів",
             "image": "https://media.giphy.com/media/3orif43L8j0FOZsqM8/giphy.gif",
-            "message": "You're on the right track! Keep learning about dogs and you'll be a dog expert in no time."
+            "message": "Ти на правильному шляху! Продовжуй вивчати собак і ти станеш експертом у цій галузі."
         },
         "15": {
-            "title": "Congratulations!",
-            "points": "You got <strong>15</strong> points",
-            "image": "https://media.giphy.com/media/3o7TKz5v8zJlXpF1C0/giphy.gif",
-            "message": "You can send it to your friend. The discount can be used only once in the specified period of time."
+            "title": "Вітаємо!",
+            "points": "Ти отримав <strong>15</strong> балів",
+            "image": "https://media.giphy.com/media/3o7TKz5v8zlXpF1C0/giphy.gif",
+            "message": "Ти можеш відправити це своєму другові. Знижка може бути використана лише один раз протягом вказаного періоду часу."
         },
         "20": {
-            "title": "Congratulations!",
-            "points": "You got <strong>20</strong> points",
+            "title": "Вітаємо!",
+            "points": "Ти отримав <strong>20</strong> балів",
             "image": "https://media.giphy.com/media/3o7TKz5v8zJlXpF1C0/giphy.gif",
-            "message": "You can send it to your friend. The discount can be used only once in the specified period of time."
+            "message": "Ти можеш відправити це своєму другові. Знижка може бути використана лише один раз протягом вказаного періоду часу."
         },
         "25": {
-            "title": "Congratulations!",
-            "points": "You got <strong>25</strong> points",
+            "title": "Вітаємо!",
+            "points": "Ти отримав <strong>25</strong> балів",
             "image": "https://media.giphy.com/media/3o7TKz5v8zJlXpF1C0/giphy.gif",
-            "message": "You can send it to your friend. The discount can be used only once in the specified period of time."
+            "message": "Ти можеш відправити це своєму другові. Знижка може бути використана лише один раз протягом вказаного періоду часу."
         }
+    },
+    "answers": {
+        "correct": "Правильно",
+        "incorrect": "Неправильно"
+    },
+    "certificat": {
+        "form": {
+            "title": "Ми можемо надіслати вам цей купон електронною поштою",
+            "placeholder": "Введіть Email",
+            "button": "Надіслати",
+            "errors": {
+                "required": "Потрібно вказати Email",
+                "email": "Будь ласка, введіть дійсний email",
+                "symbol": "Email повинен містити крапку"
+            }
+        },
+        "title": "СЕРТИФІКАТ",
+        "promo": "Промокод",
+        "sale": "Знижка",
+        "valid": "Дійсний до",
+        "months": "Квітень"
+    },
+    "buttons": {
+        "start": "Почати",
+        "next": "Далі",
+        "submit": "Підтвердити"
     }
 }

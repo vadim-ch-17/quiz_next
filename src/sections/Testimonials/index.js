@@ -39,67 +39,69 @@ const Testimonials = ({ content }) => {
         }
     }, [slideChanged]);
 
-    return reviewsData.length && (
-        <div id="testimonials" className="bg-gray4Xl pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
-            <MemoizedTitle content={memoizedTitleContent} tag="h2" classContainer="mb-0 md:mb-[64px]" />
-            <TestimonialsContainer>
-                <Swiper
-                    ref={swiperRef}
-                    modules={[Navigation, Pagination]}
-                    navigation={{
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    }}
-                    breakpoints={{
-                        320: {
-                            initialSlide: 0,
-                            slidesPerView: 1.2,
-                            spaceBetween: '20px',
-                            centeredSlides: false,
-                            speed: 1000,
-                        },
-                        768: {
-                            initialSlide: 1,
-                            slidesPerView: 3,
-                            spaceBetween: '-20px',
-                            centeredSlides: true,
-                            loop: true,
-                            speed: 500,
-                            autoplay: {
-                                delay: 300,
-                                pauseOnMouseEnter: true,
-                                disableOnInteraction: false,
-                                reverseDirection: true,
+    return (
+        <div id="testimonials">
+            {reviewsData.length && <div className="bg-gray4Xl pb-0 md:pb-28 pt-[24px] md:pt-[70px]">
+                <MemoizedTitle content={memoizedTitleContent} tag="h2" classContainer="mb-0 md:mb-[64px]" />
+                <TestimonialsContainer>
+                    <Swiper
+                        ref={swiperRef}
+                        modules={[Navigation, Pagination]}
+                        navigation={{
+                            nextEl: '.button-next',
+                            prevEl: '.button-prev',
+                        }}
+                        breakpoints={{
+                            320: {
+                                initialSlide: 0,
+                                slidesPerView: 1.2,
+                                spaceBetween: '20px',
+                                centeredSlides: false,
+                                speed: 1000,
                             },
-                        },
-                    }}
-                    pagination={{ el: '.dots', clickable: true, dynamicBullets: true, dynamicMainBullets: 2, type: 'bullets' }}
+                            768: {
+                                initialSlide: 1,
+                                slidesPerView: 3,
+                                spaceBetween: '-20px',
+                                centeredSlides: true,
+                                loop: true,
+                                speed: 500,
+                                autoplay: {
+                                    delay: 300,
+                                    pauseOnMouseEnter: true,
+                                    disableOnInteraction: false,
+                                    reverseDirection: true,
+                                },
+                            },
+                        }}
+                        pagination={{ el: '.dots', clickable: true, dynamicBullets: true, dynamicMainBullets: 2, type: 'bullets' }}
 
-                    onSlideChangeTransitionEnd={() => {
-                        setSlideChanged(true);
-                    }}
+                        onSlideChangeTransitionEnd={() => {
+                            setSlideChanged(true);
+                        }}
 
-                >
-                    {reviewsData.length && reviewsData.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
-                        </SwiperSlide>
-                    ))}
-                    {reviewsData.length && reviewsData.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
-                        </SwiperSlide>
-                    ))}
+                    >
+                        {reviewsData.length && reviewsData.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
+                            </SwiperSlide>
+                        ))}
+                        {reviewsData.length && reviewsData.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <MemoizedSlide slide={item} content={memoizedContent} slideChanged={slideChanged} />
+                            </SwiperSlide>
+                        ))}
 
 
-                    <div className="slider-navigation hidden md:flex justify-center mt-5">
-                        <div className="button-prev rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowLeft className=' text-[28px]' /></div>
-                        <div className="dots flex items-center justify-center !w-auto mx-28 !translate-x-0"></div>
-                        <div className="button-next rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowRight className=' text-[28px]' /></div>
-                    </div>
-                </Swiper>
-            </TestimonialsContainer>
-        </div >
+                        <div className="slider-navigation hidden md:flex justify-center mt-5">
+                            <div className="button-prev rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowLeft className=' text-[28px]' /></div>
+                            <div className="dots flex items-center justify-center !w-auto mx-28 !translate-x-0"></div>
+                            <div className="button-next rounded-full h-[54px] w-[54px] bg-blue text-white flex justify-center items-center hover:cursor-pointer"><GoArrowRight className=' text-[28px]' /></div>
+                        </div>
+                    </Swiper>
+                </TestimonialsContainer>
+            </div >}
+        </div>
     );
 }
 

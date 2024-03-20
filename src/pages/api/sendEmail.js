@@ -12,6 +12,17 @@ export default async function handler(req, res) {
 
     const sendTo = emailTo || process.env.EMAIL_TO;
 
+    let mailOptions = {
+      from: process.env.EMAIL_USERNAME,
+      to: sendTo,
+      subject: `New message from ${name}`,
+      text: message,
+    };
+
+    if (image) {
+      mailOptions = { ...mailOptions, ...hasImage() };
+    }
+
     const transporter = nodemailer.createTransport({
       host: "mail.adm.tools",
       port: 465,
@@ -23,13 +34,7 @@ export default async function handler(req, res) {
     });
 
     try {
-      await transporter.sendMail({
-        from: process.env.EMAIL_USERNAME,
-        to: sendTo,
-        subject: `New message from ${name}`,
-        text: message,
-        ...hasImage()
-      });
+      await transporter.sendMail(mailOptions);
 
       res.status(200).json({ success: true });
     } catch (error) {
