@@ -8,6 +8,7 @@ import { validationForm } from "./componentUtils";
 import ResponsiveImage from "../ResponsiveImage";
 import { useLandingContext } from "@/utils/landing-context";
 import Loader from "../Loader";
+import Link from "next/link";
 
 const CertificateQuiz = ({ content }) => {
     const { t } = useTranslation("quiz");
@@ -15,9 +16,10 @@ const CertificateQuiz = ({ content }) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm({ resolver: yupResolver(validationForm(formInputMessages)) });
     const certificateRef = useRef(null);
     const { setIsOpenModal, setModalContent, setLoader } = useLandingContext();
-
+    const baseUrl = window.location;
 
     const submitForm = (data) => {
+
         setLoader(true)
         reset()
         sendEmail(data, certificateRef).then(res => {
@@ -53,7 +55,7 @@ const CertificateQuiz = ({ content }) => {
                             <p className=" px-[10px] sm:px-[25px] py-[5px] sm:py-[15px] uppercase rounded-[10px] bg-pink w-fit text-2xl sm:text-[30px] text-darkPrimary font-bold leading-none">PTTCQDHY</p>
                         </div>
                         <div className="cquiz-certificate__footer text-sm font-bold text-successDark underline break-normal pr-3 sm:pr-0">
-                            <a href="https://quiz-mar.codevery.dev" className="break-normal">quiz-mar.codevery.dev</a>
+                            {baseUrl && <Link href={baseUrl.origin} className="break-normal">{baseUrl.host}</Link>}
                         </div>
                     </div>
                     <div className="cquiz-certificate__column second w-[36%] flex flex-col justify-between">
