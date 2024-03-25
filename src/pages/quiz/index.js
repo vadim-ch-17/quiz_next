@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useForm, Controller } from 'react-hook-form';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -6,7 +6,8 @@ import dynamic from "next/dynamic";
 import Layout from "@/components/Layout";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import Button from "@/components/Button";
-import QuizCard from "@/components/QuizCard";
+// import QuizCard from "@/components/QuizCard";
+import { MemoizedQuizCard } from "@/components/QuizCard";
 
 const Quiz = () => {
     const [start, setStart] = useState(false)
@@ -17,6 +18,7 @@ const Quiz = () => {
     const [question, setQuestion] = useState(0)
     const [isOneSelected, setIsOneSelected] = useState(false);
 
+
     const { t } = useTranslation('quiz')
     const questions = t('questions', { returnObjects: true })
     const final = t('final', { returnObjects: true })
@@ -25,8 +27,7 @@ const Quiz = () => {
 
     const onSubmit = (data) => {
         setIsOneSelected(false);
-        const checkAnswer = questions[step].answers.filter((item) => item.answer === data[`step${step + 1}`])[0]
-        if (checkAnswer.correct) {
+        if (data[`step${step + 1}`]) {
             setScore(score + 5);
         }
 
@@ -68,14 +69,16 @@ const Quiz = () => {
                             render={({ field }) => (
                                 <div className={`grid ${questions[step].withImage ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'} gap-[17px] justify-center`}>
                                     {questions[step].answers.map((item, idx) => (
-                                        <QuizCard key={idx}
+                                        <MemoizedQuizCard key={idx}
                                             quiz={item}
                                             idx={idx}
+                                            step={step}
                                             field={field}
                                             isOneSelected={isOneSelected}
                                             setIsOneSelected={setIsOneSelected}
                                             withImage={questions[step].withImage} />
                                     ))}
+
                                 </div>
                             )}
                         />

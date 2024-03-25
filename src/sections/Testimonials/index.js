@@ -6,8 +6,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import "swiper/swiper-bundle.css";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
-// import Title from "@/components/Title";
-// import Slide from "@/components/Slide";
 import { MemoizedTitle } from "@/components/Title";
 import MemoizedSlide from "@/components/Slide";
 import { TestimonialsContainer } from "./style";
