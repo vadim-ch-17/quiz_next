@@ -3,8 +3,6 @@ import nodemailer from 'nodemailer';
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, email, message, image, emailTo } = req.body;
-    // console.log(req.body);
-
     const hasImage = () => {
       const base64Image = image.split(";base64,").pop();
       return image && { attachments: [{ filename: 'certificate.jpg', content: base64Image, encoding: 'base64' }] }

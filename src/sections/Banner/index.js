@@ -33,24 +33,6 @@ const Banner = ({ content }) => {
                             height={700}
                             width={625}
                             className="max-h-[700px] " />
-                        {/* <picture>
-                            <source
-                                media="(max-width: 500px)"
-                                srcSet={`${image}400.webp`}
-                            />
-                            <source
-                                media="(max-width: 1000px)"
-                                srcSet={`${image}600.webp`}
-                            />
-                            <img
-                                className="max-h-[700px] "
-                                src={`${image}600.webp`}
-                                alt={'Quiz plugin for WordPress'}
-                                loading="eager"
-                                height={700}
-                                width={625}
-                            />
-                        </picture> */}
                     </div>
                 </div>
             </div>
