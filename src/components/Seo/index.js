@@ -34,6 +34,10 @@ const Seo = ({ seo }) => {
                     name: 'viewport',
                     content: 'width=device-width, initial-scale=1'
                 },
+                {
+                    name: 'google-site-verification',
+                    content: 'GtiE1HJ9_rjPt5y4-hnY0awsE8j-lRSo3xZUhMZJjsE'
+                }
             ]}
         />
     );
