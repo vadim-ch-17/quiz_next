@@ -20,11 +20,11 @@ const Seo = ({ seo }) => {
                 site_name: title,
             }}
             robotsProps={{
-                noindex: true,
-                nofollow: true,
+                noindex: false,
+                nofollow: false,
             }}
-            noindex={true}
-            nofollow={true}
+            noindex={false}
+            nofollow={false}
             additionalMetaTags={[
                 {
                     name: 'keywords',
